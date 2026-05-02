@@ -1,38 +1,47 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { BarChart3, BriefcaseBusiness, ClipboardList, Mail, Plus, Search, Sparkles } from "lucide-react";
 import "./styles.css";
 
 const projectIdeas = [
   {
-    title: "BI Request & Ticketing System",
+    title: "Analytics Intake & Prioritization Engine",
     category: "Operations / Analytics Intake",
-    summary: "A lightweight intake and queue tool for dashboard, reporting, Salesforce, and analysis requests.",
-    value: "Shows process design, prioritization, stakeholder intake, and analytics operations thinking.",
+    summary:
+      "A lightweight intake and queue tool for dashboard, reporting, Salesforce, and analysis requests.",
+    value:
+      "Designed to standardize requests, create visibility into live work, and improve how analytics teams prioritize business demand.",
   },
   {
     title: "Seller KPI Scorecard",
     category: "Revenue Strategy",
-    summary: "A dashboard concept for seller activity, pipeline sufficiency, account touches, and performance attainment.",
-    value: "Shows FP&A, sales strategy, Power BI, KPI design, and executive reporting judgment.",
+    summary:
+      "A dashboard concept for seller activity, pipeline sufficiency, account touches, and performance attainment.",
+    value:
+      "Demonstrates how sales activity, pipeline health, and performance data can be translated into operating rhythms for leadership.",
   },
   {
     title: "Customer Profitability Lens",
     category: "Strategic Finance",
-    summary: "A mock customer-level P&L view that identifies margin leakage, low-profit accounts, and expansion opportunities.",
-    value: "Shows commercial finance thinking and ability to connect data to margin expansion.",
+    summary:
+      "A customer-level P&L concept that identifies margin leakage, low-profit accounts, and expansion opportunities.",
+    value:
+      "Shows how financial analytics can move beyond reporting and directly support margin expansion and commercial decisions.",
   },
   {
     title: "Territory Potential Planner",
     category: "Go-to-Market Strategy",
-    summary: "A planning tool that compares revenue, GDP, customer concentration, and seller coverage.",
-    value: "Shows strategic planning, territory design, and cross-functional decision support.",
+    summary:
+      "A planning framework that compares revenue, customer concentration, GDP, and seller coverage.",
+    value:
+      "Demonstrates strategic territory design, capacity planning, and data-informed sales coverage decisions.",
   },
   {
     title: "Executive Business Review Template",
     category: "Leadership Communication",
-    summary: "A polished executive-ready business review structure with trend narratives and recommended actions.",
-    value: "Shows senior-level communication and ability to translate analytics into decisions.",
+    summary:
+      "A structured business review format that combines performance trends, risks, opportunities, and recommended actions.",
+    value:
+      "Shows the ability to convert complex analysis into executive-ready narratives and decisions.",
   },
 ];
 
@@ -48,6 +57,7 @@ const categories = ["Unassigned", "Complex Project", "Minor Project", "Ad Hoc An
 
 function App() {
   const [activePage, setActivePage] = useState("home");
+
   const [tickets, setTickets] = useState([
     {
       id: "TCK-1001",
@@ -88,7 +98,11 @@ function App() {
 
   function createTicket(e) {
     e.preventDefault();
-    if (!form.description.trim() || !form.dueDate) return;
+
+    if (!form.description.trim() || !form.dueDate) {
+      alert("Please enter a description and requested completion date.");
+      return;
+    }
 
     const nextTicket = {
       id: `TCK-${1000 + tickets.length + 1}`,
@@ -101,6 +115,7 @@ function App() {
     };
 
     setTickets([nextTicket, ...tickets]);
+
     setForm({
       type: "Power BI Dashboard",
       description: "",
@@ -110,60 +125,83 @@ function App() {
   }
 
   function updateTicket(id, field, value) {
-    setTickets((current) =>
-      current.map((ticket) =>
+    setTickets((currentTickets) =>
+      currentTickets.map((ticket) =>
         ticket.id === id ? { ...ticket, [field]: value } : ticket
       )
     );
   }
 
   return (
-    <main>
+    <main className="site">
       <nav className="nav">
-        <div className="brand">Dennis Rosenbaum</div>
+        <button className="brand" onClick={() => setActivePage("home")}>
+          Dennis Rosenbaum
+        </button>
+
         <div className="navLinks">
-          {["home", "projects", "ticketing", "about", "contact"].map((page) => (
-            <button
-              key={page}
-              className={activePage === page ? "active" : ""}
-              onClick={() => setActivePage(page)}
-            >
-              {page}
-            </button>
-          ))}
+          <button onClick={() => setActivePage("projects")}>Projects</button>
+          <button onClick={() => setActivePage("ticketing")}>Ticketing Demo</button>
+          <button onClick={() => setActivePage("about")}>About</button>
+          <button onClick={() => setActivePage("contact")}>Contact</button>
         </div>
       </nav>
 
       {activePage === "home" && (
         <section className="hero">
-          <div className="eyebrow"><Sparkles size={16} /> Strategic Finance • Analytics • Revenue Strategy</div>
-          <h1>Portfolio of business tools built to turn data into decisions.</h1>
-          <p>
-            A curated set of lightweight projects demonstrating finance leadership,
-            KPI design, business intelligence, sales strategy, and operational execution.
+          <p className="eyebrow">Strategic Finance • Analytics • Revenue Strategy</p>
+
+          <h1>
+            I build data-driven systems that improve revenue performance and
+            decision-making.
+          </h1>
+
+          <p className="heroText">
+            Strategic Finance leader focused on FP&A, business intelligence, and
+            sales strategy. This site showcases lightweight tools and frameworks
+            designed to solve real business problems.
           </p>
+
           <div className="heroActions">
             <button onClick={() => setActivePage("projects")}>View Projects</button>
-            <button className="secondary" onClick={() => setActivePage("ticketing")}>Open Ticketing Demo</button>
+            <button onClick={() => setActivePage("ticketing")}>
+              Open Ticketing Demo
+            </button>
           </div>
         </section>
       )}
 
       {activePage === "projects" && (
         <section className="section">
-          <h2>Project Portfolio</h2>
+          <h2>Projects</h2>
+
           <p className="sectionIntro">
-            Each project is intentionally lightweight but designed to communicate strategic thinking,
-            technical fluency, and real business judgment.
+            Each project is intentionally lightweight, but designed to demonstrate
+            strategic thinking, technical fluency, and practical business judgment.
           </p>
-          <div className="grid">
-            {projectIdeas.map((project) => (
-              <article className="card" key={project.title}>
-                <div className="icon"><BarChart3 size={20} /></div>
-                <p className="category">{project.category}</p>
-                <h3>{project.title}</h3>
+
+          <div className="projectsList">
+            {projectIdeas.map((project, index) => (
+              <article className="project" key={project.title}>
+                <p className="projectCategory">{project.category}</p>
+
+                <h3>
+                  {String(index + 1).padStart(2, "0")} — {project.title}
+                </h3>
+
                 <p>{project.summary}</p>
-                <p className="value">{project.value}</p>
+                <p>{project.value}</p>
+
+                <button
+                  className="textButton"
+                  onClick={() =>
+                    project.title.includes("Analytics Intake")
+                      ? setActivePage("ticketing")
+                      : null
+                  }
+                >
+                  → View Project
+                </button>
               </article>
             ))}
           </div>
@@ -172,33 +210,34 @@ function App() {
 
       {activePage === "ticketing" && (
         <section className="section">
-          <div className="splitHeader">
-            <div>
-              <h2>BI / Analytics Ticketing System</h2>
-              <p className="sectionIntro">
-                A simple intake queue for analytics and Salesforce-related requests.
-              </p>
-            </div>
-            <div className="stat">
-              <strong>{tickets.length}</strong>
-              <span>Live Tickets</span>
-            </div>
-          </div>
+          <h2>Analytics Intake & Prioritization Engine</h2>
+
+          <p className="sectionIntro">
+            A simple operating system for capturing analytics requests,
+            categorizing work, and tracking live demand.
+          </p>
 
           <div className="ticketLayout">
             <form className="panel" onSubmit={createTicket}>
-              <h3><Plus size={18} /> Create Ticket</h3>
+              <h3>Create Ticket</h3>
 
               <label>Request Type</label>
-              <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}>
-                {requestTypes.map((type) => <option key={type}>{type}</option>)}
+              <select
+                value={form.type}
+                onChange={(e) => setForm({ ...form, type: e.target.value })}
+              >
+                {requestTypes.map((type) => (
+                  <option key={type}>{type}</option>
+                ))}
               </select>
 
               <label>Description</label>
               <textarea
                 placeholder="Briefly describe the business request..."
                 value={form.description}
-                onChange={(e) => setForm({ ...form, description: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, description: e.target.value })
+                }
               />
 
               <label>Requested Completion Date</label>
@@ -219,12 +258,18 @@ function App() {
             </form>
 
             <div className="panel queue">
-              <div className="queueTop">
-                <h3><ClipboardList size={18} /> Ticket Queue</h3>
-                <div className="search">
-                  <Search size={16} />
-                  <input placeholder="Search tickets..." value={search} onChange={(e) => setSearch(e.target.value)} />
+              <div className="queueHeader">
+                <div>
+                  <h3>Live Ticket Queue</h3>
+                  <p>{tickets.length} active tickets</p>
                 </div>
+
+                <input
+                  className="searchInput"
+                  placeholder="Search tickets..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
               </div>
 
               <div className="tableWrap">
@@ -239,6 +284,7 @@ function App() {
                       <th>Status</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     {filteredTickets.map((ticket) => (
                       <tr key={ticket.id}>
@@ -246,17 +292,35 @@ function App() {
                         <td>{ticket.type}</td>
                         <td>
                           {ticket.description}
-                          {ticket.fileName && <span className="file">Attachment: {ticket.fileName}</span>}
+                          {ticket.fileName && (
+                            <span className="file">
+                              Attachment: {ticket.fileName}
+                            </span>
+                          )}
                         </td>
                         <td>{ticket.dueDate}</td>
                         <td>
-                          <select value={ticket.category} onChange={(e) => updateTicket(ticket.id, "category", e.target.value)}>
-                            {categories.map((category) => <option key={category}>{category}</option>)}
+                          <select
+                            value={ticket.category}
+                            onChange={(e) =>
+                              updateTicket(ticket.id, "category", e.target.value)
+                            }
+                          >
+                            {categories.map((category) => (
+                              <option key={category}>{category}</option>
+                            ))}
                           </select>
                         </td>
                         <td>
-                          <select value={ticket.status} onChange={(e) => updateTicket(ticket.id, "status", e.target.value)}>
-                            {statuses.map((status) => <option key={status}>{status}</option>)}
+                          <select
+                            value={ticket.status}
+                            onChange={(e) =>
+                              updateTicket(ticket.id, "status", e.target.value)
+                            }
+                          >
+                            {statuses.map((status) => (
+                              <option key={status}>{status}</option>
+                            ))}
                           </select>
                         </td>
                       </tr>
@@ -270,36 +334,41 @@ function App() {
       )}
 
       {activePage === "about" && (
-        <section className="section narrow">
+        <section className="section">
           <h2>About</h2>
-          <p>
-            I am a finance and strategy leader operating at the intersection of FP&A,
-            revenue analytics, sales strategy, and business intelligence. This site demonstrates
-            how I think about turning messy business problems into scalable tools, executive-ready
-            insights, and practical operating systems.
+
+          <p className="sectionIntro">
+            I am a finance and strategy leader operating at the intersection of
+            FP&A, revenue analytics, sales strategy, and business intelligence.
           </p>
-          <div className="aboutGrid">
-            <div><BriefcaseBusiness /><strong>Business Strategy</strong><span>KPI design, revenue performance, margin expansion.</span></div>
-            <div><BarChart3 /><strong>Analytics</strong><span>Power BI, SQL, Salesforce, financial and operational reporting.</span></div>
-            <div><ClipboardList /><strong>Execution</strong><span>Stakeholder intake, prioritization, adoption, and process design.</span></div>
-          </div>
+
+          <p>
+            My work focuses on translating ambiguous business problems into
+            scalable analytics ecosystems, executive-ready decision frameworks,
+            and practical operating tools. I am especially interested in roles
+            where finance, commercial strategy, and data-driven execution meet.
+          </p>
         </section>
       )}
 
       {activePage === "contact" && (
-        <section className="section narrow">
+        <section className="section">
           <h2>Contact</h2>
-          <p>
-            Interested in discussing Strategic Finance, FP&A, Revenue Strategy, or analytics leadership opportunities?
+
+          <p className="sectionIntro">
+            Interested in discussing Strategic Finance, FP&A, Revenue Strategy,
+            or analytics leadership opportunities?
           </p>
-          <div className="contactCard">
-            <Mail />
-            <span>Replace this with your preferred email address or LinkedIn profile.</span>
-          </div>
+
+          <p>
+            Add your email address, LinkedIn profile, and resume link here.
+          </p>
         </section>
       )}
     </main>
   );
 }
+
+export default App;
 
 createRoot(document.getElementById("root")).render(<App />);
