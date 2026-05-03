@@ -253,10 +253,11 @@ main {
 }
 
 .sub-brand {
-  font-size: 10px; /* within your 8–10 target */
-  color: #444;
-  margin-top: 2px;
-  letter-spacing: 0.5px;
+  font-size: 9px;           /* ⬅️ smaller */
+  color: #555;              /* charcoal grey */
+  margin-top: 4px;
+  letter-spacing: 0.6px;    /* slightly more refined */
+  font-weight: 500;
 }
 
 .about-divider {
