@@ -149,9 +149,14 @@ main {
   position: relative;
   min-width: 275px;
   min-height: 220px;
+  padding: 20px 22px;
   box-shadow:
   0 2px 4px rgba(0, 0, 0, 0.06),
   0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+.tag-row {
+  margin-top: 16px;
 }
 
 .project-card::before {
