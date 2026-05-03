@@ -128,7 +128,7 @@ function Projects() {
   return (
     <section className="section-block projects-section">
       <div className="section-heading project-heading-row">
-        <h2>Projects</h2>
+        <h2>Projects 📊</h2>
 
         <div className="carousel-controls">
           <button onClick={() => scrollProjects("left")} aria-label="Scroll projects left">
