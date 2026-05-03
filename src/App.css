@@ -264,13 +264,10 @@ main {
 }
 
 .resume-section {
-  margin-top: 36px; /* adjust if needed */
-}
-
-.resume-section {
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: 18px; /* controls space between cards */
+  gap: 18px;
 }
 
 .resume-card {
