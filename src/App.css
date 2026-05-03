@@ -263,46 +263,122 @@ main {
   margin: 6px 0;
 }
 
+.resume-section {
+  margin: 36px 0 72px;
+}
+
+.resume-card {
+  padding: 30px 32px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.resume-section-block h3 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #333;
+}
+
+.resume-section-block p {
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.resume-section-block p:last-child {
+  margin-bottom: 0;
+}
+
+.resume-divider {
+  height: 1px;
+  background: #ececec;
+  margin: 26px 0;
+}
+
 .resume-list {
   margin: 0;
   padding-left: 18px;
-  line-height: 1.6;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .resume-capabilities {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 42px;
 }
 
-.resume-company h4 {
-  margin: 0 0 16px;
+.resume-capabilities h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 650;
+  color: #222;
+}
+
+.resume-company {
   font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-top: 4px;
+}
+
+.resume-company-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 3px 0 22px;
 }
 
 .resume-role {
-  margin-bottom: 20px;
+  padding-top: 22px;
+  margin-top: 22px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.resume-role:first-of-type {
+  margin-top: 0;
 }
 
 .resume-role-heading {
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
-  margin-bottom: 6px;
+  gap: 20px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.resume-role-heading h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
 }
 
 .resume-role-heading span {
   color: #666;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 @media (max-width: 760px) {
+  .resume-card {
+    padding: 24px;
+  }
+
   .resume-capabilities {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .resume-role-heading {
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
 }
