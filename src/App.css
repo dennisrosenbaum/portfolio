@@ -144,26 +144,18 @@ main {
 }
 
 .project-card {
-  min-width: 310px;
-  max-width: 310px;
-  min-height: 245px;
-
-  padding: 24px;
-  background: #ffffff;
-  border: 1px solid #ececec;
-  border-radius: 12px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  scroll-snap-align: start;
-
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.06),
-    0 3px 6px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
+.project-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 2px;
+}
 
 .project-card h3 {
   margin: 0 0 12px;
