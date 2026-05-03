@@ -57,13 +57,7 @@ function About() {
 
       <div className="about-box">
         <p>
-          This site is a practical showcase of the skills I bring to business
-          strategy, finance, analytics, and operational execution. I am drawn to
-          data because it reveals how a business actually works — where performance
-          is created, where friction exists, and where better decisions can be made.
-          I bring a curious, action-oriented, and friendly-competitive mindset to
-          problem solving, with a bias toward building useful tools, connecting
-          ideas across teams, and turning insight into measurable business impact.
+          Welcome to my portfolio. This site was built entirely using ChatGPT as part of my effort to deepen my understanding of AI and expand my technical skill set. While I’m not a traditional programmer, I’m a data-driven finance professional who enjoys building, learning, and solving complex business problems. This portfolio is a reflection of that mindset and offers a glimpse into how I think and work.
         </p>
       </div>
     </section>
