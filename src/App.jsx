@@ -147,8 +147,11 @@ function Resume() {
     <section className="section-block resume-section">
       <div className="resume-section-group">
         <div className="section-heading">
-          <h2>Executive Profile</h2>
-        </div>
+  <h2 className="section-title">
+    <User className="section-icon" />
+    Executive Profile
+  </h2>
+</div>
 
         <div className="resume-card">
           <div className="resume-section-block">
@@ -170,8 +173,11 @@ function Resume() {
 
       <div className="resume-section-group">
         <div className="section-heading">
-          <h2>Education & Certification</h2>
-        </div>
+  <h2 className="section-title">
+    <GraduationCap className="section-icon" />
+    Education & Certification
+  </h2>
+</div>
 
         <div className="resume-card">
           <div className="resume-section-block">
@@ -185,8 +191,11 @@ function Resume() {
 
       <div className="resume-section-group">
         <div className="section-heading">
-          <h2>Core Capabilities</h2>
-        </div>
+  <h2 className="section-title">
+    <BarChart3 className="section-icon" />
+    Core Capabilities
+  </h2>
+</div>
 
         <div className="resume-card">
           <div className="resume-section-block">
@@ -223,8 +232,11 @@ function Resume() {
 
       <div className="resume-section-group">
         <div className="section-heading">
-          <h2>Professional Experience</h2>
-        </div>
+  <h2 className="section-title">
+    <Briefcase className="section-icon" />
+    Professional Experience
+  </h2>
+</div>
 
         <div className="resume-card">
           <div className="resume-section-block">
