@@ -139,10 +139,6 @@ function Projects() {
 function Resume() {
   return (
     <section className="section-block resume-section">
-      <div className="section-heading">
-        <h2>Resume</h2>
-      </div>
-
       <div className="resume-card">
         <div className="resume-section-block">
           <h3>Executive Profile</h3>
