@@ -2,191 +2,122 @@ import "./App.css";
 
 const projects = [
   {
-    title: "BI Ticketing & Project Intake System",
-    description:
-      "A lightweight internal request system for dashboard, reporting, Salesforce, and analytics project intake.",
-    tags: ["Analytics", "Operations", "Frontend"],
+    title: "BI Request & Ticketing System",
+    description: "A lightweight intake and prioritization system for analytics requests.",
+    tags: ["Operations", "Analytics", "Workflow"],
   },
   {
-    title: "Customer Reporting Portal",
-    description:
-      "A Power BI-powered customer portal concept for orders, invoices, inventory, usage, and spend insights.",
-    tags: ["Power BI", "Customer Experience", "Strategy"],
+    title: "Sales KPI Framework",
+    description: "A seller performance model connecting activity, pipeline, and outcomes.",
+    tags: ["Finance", "Sales Strategy", "Power BI"],
   },
   {
-    title: "Seller KPI Framework",
-    description:
-      "A performance management framework connecting seller activity, pipeline health, and revenue outcomes.",
-    tags: ["Finance", "Sales Strategy", "KPIs"],
+    title: "Customer Business Dashboard",
+    description: "A customer-facing reporting portal for orders, invoices, and spend visibility.",
+    tags: ["Customer Experience", "Reporting", "Strategy"],
+  },
+  {
+    title: "Portfolio Finance Dashboard",
+    description: "A personal financial database and dashboard for monthly tracking.",
+    tags: ["Finance", "Python", "Data"],
   },
 ];
 
-const experience = [
-  {
-    role: "Manager, Finance Operations Strategy",
-    company: "Staples Technology Solutions",
-    dates: "Current",
-    bullets: [
-      "Lead analytics, KPI design, and strategic reporting across Sales, Finance, and Operations.",
-      "Build scalable decision tools that connect financial outcomes to operational behavior.",
-    ],
-  },
-  {
-    role: "Finance, Analytics & Operations",
-    company: "Progressive Roles",
-    dates: "Prior",
-    bullets: [
-      "Developed reporting ecosystems, business reviews, and data models supporting commercial strategy.",
-    ],
-  },
-];
-
-const writing = [
-  {
-    title: "How Better Data Changes Seller Behavior",
-    preview:
-      "A short perspective on moving from reporting activity to influencing execution.",
-  },
-  {
-    title: "Building Decision Frameworks, Not Dashboards",
-    preview:
-      "Why the best analytics tools help leaders make clearer choices faster.",
-  },
-];
-
-function Hero() {
+function TopRibbon() {
   return (
-    <header className="hero">
-      <p className="eyebrow">Personal Portfolio</p>
-      <h1>Dennis Rosenbaum, CPA</h1>
-      <p className="subtitle">builder → translator → operator</p>
-      <p className="hero-copy">
-        Connecting financial outcomes to operational behavior through analytics,
-        strategy, and scalable business tools.
-      </p>
+    <header className="top-ribbon">
+      <a href="/" className="brand">Dennis Rosenbaum, CPA</a>
+
+      <nav className="nav-links">
+        <a href="/">home</a>
+        <a href="/resume">resume</a>
+        <a href="/personal">personal</a>
+        <a href="/projects">projects</a>
+      </nav>
     </header>
   );
 }
 
-function Nav() {
+function About() {
   return (
-    <nav className="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  );
-}
-
-function Section({ id, title, children }) {
-  return (
-    <section id={id} className="section">
-      <div className="section-header">
-        <h2>{title}</h2>
-      </div>
-      {children}
+    <section className="about-section">
+      <p className="eyebrow">finance • strategy • analytics</p>
+      <h1>builder → translator → operator</h1>
+      <p className="about-copy">
+        I operate at the intersection of finance, sales strategy, and analytics—designing
+        performance frameworks that connect activity, pipeline, and pricing decisions directly
+        to revenue and margin outcomes. I architect the systems, models, and operating cadences
+        that drive it, enabling leadership to make better and faster decisions. The result is
+        measurable impact across complex, cross-functional environments.
+      </p>
     </section>
   );
 }
 
-function ProjectItem({ title, description, tags }) {
+function ProjectCard({ project }) {
   return (
-    <article className="item">
+    <article className="project-card">
       <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
 
-      <div className="tags">
-        {tags.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
-    </article>
-  );
-}
-
-function ExperienceItem({ role, company, dates, bullets }) {
-  return (
-    <article className="item">
-      <div className="item-topline">
-        <div>
-          <h3>{role}</h3>
-          <p className="muted">{company}</p>
+        <div className="tag-row">
+          {project.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
         </div>
-        <span className="date">{dates}</span>
       </div>
 
-      <ul>
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
+      <button className="go-button" aria-label={`Go to ${project.title}`}>
+        →
+      </button>
     </article>
   );
 }
 
-function WritingItem({ title, preview }) {
+function Projects() {
   return (
-    <article className="writing-item">
-      <h3>{title}</h3>
-      <p>{preview}</p>
-    </article>
+    <section className="section-block">
+      <div className="section-heading">
+        <p>selected work</p>
+        <h2>Projects</h2>
+      </div>
+
+      <div className="project-carousel">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  return (
+    <section className="contact-section">
+      <p>Feel free to reach out.</p>
+
+      <div className="contact-links">
+        <a href="mailto:dennis@example.com">dennis@example.com</a>
+        <a
+          href="https://www.linkedin.com/in/dennis-rosenbaum-a07137150/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          linkedin
+        </a>
+      </div>
+    </section>
   );
 }
 
 export default function App() {
   return (
-    <main className="page">
-      <Hero />
-      <Nav />
-
-      <Section id="about" title="About">
-        <p className="about-text">
-          I work at the intersection of finance, analytics, sales strategy, and
-          operations. My focus is building practical tools that help leaders see
-          the business clearly, understand what is driving performance, and make
-          better decisions. I’m especially interested in translating complex data
-          into simple frameworks that improve execution.
-        </p>
-      </Section>
-
-      <Section id="projects" title="Projects">
-        <div className="stack">
-          {projects.map((project) => (
-            <ProjectItem key={project.title} {...project} />
-          ))}
-        </div>
-      </Section>
-
-      <Section id="experience" title="Experience">
-        <div className="stack">
-          {experience.map((job) => (
-            <ExperienceItem key={job.role} {...job} />
-          ))}
-        </div>
-      </Section>
-
-      <Section id="writing" title="Writing">
-        <div className="stack">
-          {writing.map((post) => (
-            <WritingItem key={post.title} {...post} />
-          ))}
-        </div>
-      </Section>
-
-      <Section id="contact" title="Contact">
-        <p className="contact-copy">Feel free to reach out.</p>
-        <div className="contact-links">
-          <a href="mailto:your-email@example.com">Email</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href="/resume.pdf">Resume</a>
-        </div>
-      </Section>
+    <main>
+      <TopRibbon />
+      <About />
+      <Projects />
+      <Contact />
     </main>
   );
 }
