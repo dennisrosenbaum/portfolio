@@ -40,6 +40,7 @@ function TopRibbon() {
       </div>
 
       <nav className="nav-links">
+        <Link to="/">home</Link>
         <Link to="/resume">resume</Link>
         <Link to="/personal">personal</Link>
         <Link to="/projects">projects</Link>
