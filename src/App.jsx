@@ -12,21 +12,25 @@ const projects = [
   {
     title: "BI Request & Ticketing System",
     description: "A lightweight intake and prioritization system for analytics requests.",
+    color: "#3b82f6", // blue
     tags: ["Operations", "Analytics", "Workflow"],
   },
   {
     title: "Sales KPI Framework",
     description: "A seller performance model connecting activity, pipeline, and outcomes.",
+    color: "#10b981", // green
     tags: ["Finance", "Sales Strategy", "Power BI"],
   },
   {
     title: "Customer Business Dashboard",
     description: "A customer-facing reporting portal for orders, invoices, and spend visibility.",
+    color: "#f59e0b", // amber
     tags: ["Customer Experience", "Reporting", "Strategy"],
   },
   {
     title: "Portfolio Finance Dashboard",
     description: "A personal financial database and dashboard for monthly tracking.",
+    color: "#8b5cf6", // purple
     tags: ["Finance", "Python", "Data"],
   },
 ];
@@ -88,21 +92,16 @@ function About() {
 
 function ProjectCard({ project }) {
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      style={{ borderLeft: `4px solid ${project.color}` }}
+    >
       <div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-
-        <div className="tag-row">
-          {project.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
       </div>
 
-      <button className="go-button" aria-label={`Go to ${project.title}`}>
-        →
-      </button>
+      <button className="go-button">→</button>
     </article>
   );
 }
