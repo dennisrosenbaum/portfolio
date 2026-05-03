@@ -32,78 +32,209 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 34px 0;
+  padding: 34px 0 24px;
   border-bottom: 1px solid #eeeeee;
 }
 
 .brand {
-  font-size: 15px;
+  font-size: clamp(32px, 5vw, 58px);
   font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
 }
 
 .nav-links {
   display: flex;
-  gap: 26px;
+  gap: 24px;
   font-size: 14px;
   color: #555;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.contact-section a:hover {
   opacity: 0.6;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .about-section {
-  max-width: 780px;
-  margin: 120px auto;
+  max-width: 820px;
+  margin: 58px auto 100px;
   text-align: center;
 }
 
 .about-section h1 {
-  font-size: clamp(42px, 7vw, 82px);
+  font-size: clamp(30px, 4.9vw, 57px);
   margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1;
 }
 
-.about-copy {
-  margin-top: 30px;
-  color: #444;
-  line-height: 1.7;
+.about-box {
+  margin: 34px auto 0;
+  padding: 30px 34px;
+  background: #f6f3ed;
+  border: 1px solid #ebe5da;
+  border-radius: 24px;
+  text-align: left;
+}
+
+.about-box p {
+  margin: 0;
+  color: #333;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 .section-block {
-  margin-bottom: 120px;
+  margin-bottom: 110px;
+}
+
+.page-break {
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  margin-bottom: 48px;
+}
+
+.project-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-controls button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e6e2db;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-controls button:hover {
+  opacity: 0.65;
+  transform: translateY(-1px);
 }
 
 .project-carousel {
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
+  gap: 18px;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
 }
 
 .project-card {
-  min-width: 300px;
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 16px;
+  min-width: 310px;
+  max-width: 310px;
+  min-height: 245px;
+  padding: 24px;
+  border: 1px solid #ededed;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  opacity: 0.82;
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.project-card p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .tag-row {
-  margin-top: 16px;
   display: flex;
-  gap: 6px;
   flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
 }
 
 .tag-row span {
   font-size: 12px;
-  background: #f5f5f5;
-  padding: 4px 8px;
+  color: #666;
+  background: #f7f7f7;
+  padding: 6px 9px;
   border-radius: 999px;
 }
 
+.go-button {
+  align-self: flex-end;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 0;
+  color: #111;
+}
+
 .contact-section {
-  border-top: 1px solid #eee;
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
+  border-top: 1px solid #eeeeee;
+  padding: 42px 0 64px;
+  color: #444;
+  font-size: 15px;
+}
+
+@media (max-width: 760px) {
+  main {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .top-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .about-section {
+    text-align: left;
+    margin: 48px 0 90px;
+  }
+
+  .about-box {
+    padding: 24px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+  .project-card {
+    min-width: 280px;
+  }
 }
