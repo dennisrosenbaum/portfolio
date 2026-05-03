@@ -24,7 +24,7 @@ a {
 }
 
 main {
-  width: min(980px, calc(100% - 48px));
+  width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -32,15 +32,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0 18px;
+  padding: 34px 0 24px;
   border-bottom: 1px solid #eeeeee;
 }
 
 .brand {
-  font-size: clamp(28px, 3.2vw, 42px);
+  font-size: clamp(32px, 5vw, 58px);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
 }
 
 .nav-links {
@@ -50,68 +50,64 @@ main {
   color: #555;
 }
 
-.nav-links a {
-  transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
+.nav-links a:hover,
+.contact-section a:hover {
   opacity: 0.6;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .about-section {
-  max-width: 720px;
-  margin: 48px auto 80px;
+  max-width: 820px;
+  margin: 58px auto 100px;
   text-align: center;
 }
 
 .about-section h1 {
-  margin: 0 0 18px;
-  font-size: clamp(28px, 3.8vw, 48px);
+  font-size: clamp(30px, 4.9vw, 57px);
+  margin: 0;
   font-weight: 500;
   letter-spacing: -0.06em;
   line-height: 1;
 }
 
 .about-box {
-  margin: 28px auto 0;
-  padding: 28px 30px;
-  background: #f7f7f7;
-  border: 1px solid #ececec;
-  border-radius: 20px;
+  margin: 34px auto 0;
+  padding: 30px 34px;
+  background: #f6f3ed;
+  border: 1px solid #ebe5da;
+  border-radius: 24px;
   text-align: left;
 }
 
 .about-box p {
   margin: 0;
   color: #333;
-  font-size: 16.5px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 .section-block {
-  margin-bottom: 80px;
-}
-
-.projects-section {
-  padding-top: 8px;
+  margin-bottom: 110px;
 }
 
 .page-break {
-  display: none;
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  margin-bottom: 48px;
 }
 
 .project-heading-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .section-heading h2 {
   margin: 0;
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
@@ -124,7 +120,7 @@ main {
 .carousel-controls button {
   width: 38px;
   height: 38px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e6e2db;
   border-radius: 999px;
   background: #fff;
   cursor: pointer;
@@ -145,12 +141,12 @@ main {
 }
 
 .project-card {
-  min-width: 300px;
-  max-width: 300px;
-  min-height: 220px;
-  padding: 20px;
-  border: 1px solid #eeeeee;
-  border-radius: 18px;
+  min-width: 310px;
+  max-width: 310px;
+  min-height: 245px;
+  padding: 24px;
+  border: 1px solid #ededed;
+  border-radius: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,7 +161,7 @@ main {
 
 .project-card h3 {
   margin: 0 0 12px;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: -0.03em;
 }
@@ -173,7 +169,7 @@ main {
 .project-card p {
   margin: 0;
   color: #555;
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.55;
 }
 
@@ -181,7 +177,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .tag-row span {
@@ -196,14 +192,17 @@ main {
   align-self: flex-end;
   border: none;
   background: transparent;
-  font-size: 25px;
+  font-size: 26px;
   cursor: pointer;
   padding: 0;
   color: #111;
 }
 
 .contact-section {
-  display: none;
+  border-top: 1px solid #eeeeee;
+  padding: 42px 0 64px;
+  color: #444;
+  font-size: 15px;
 }
 
 @media (max-width: 760px) {
@@ -215,11 +214,6 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 22px;
-    padding: 28px 0 20px;
-  }
-
-  .brand {
-    font-size: clamp(34px, 11vw, 48px);
   }
 
   .nav-links {
@@ -229,11 +223,7 @@ main {
 
   .about-section {
     text-align: left;
-    margin: 46px 0 76px;
-  }
-
-  .about-section h1 {
-    font-size: clamp(31px, 9vw, 44px);
+    margin: 48px 0 90px;
   }
 
   .about-box {
@@ -244,12 +234,7 @@ main {
     font-size: 16px;
   }
 
-  .section-block {
-    margin-bottom: 70px;
-  }
-
   .project-card {
     min-width: 280px;
-    max-width: 280px;
   }
 }
