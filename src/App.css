@@ -420,12 +420,6 @@ main {
     gap: 22px;
   }
 
-  .resume-role-heading {
-    flex-direction: column;
-    gap: 4px;
-  }
-}
-
 @media (max-width: 760px) {
   .resume-role-grid {
     grid-template-columns: 1fr;
