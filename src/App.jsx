@@ -263,16 +263,25 @@ function Resume() {
 function ResumeRole({ title, dates, bullets }) {
   return (
     <div className="resume-role">
-      <div className="resume-role-heading">
-        <h4>{title}</h4>
-        <span>{dates}</span>
-      </div>
+      <div className="resume-role-grid">
+        
+        {/* LEFT COLUMN (DATES) */}
+        <div className="resume-role-dates">
+          {dates}
+        </div>
 
-      <ul className="resume-list">
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
+        {/* RIGHT COLUMN (CONTENT) */}
+        <div className="resume-role-content">
+          <h4>{title}</h4>
+
+          <ul className="resume-list">
+            {bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
     </div>
   );
 }
