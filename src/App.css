@@ -147,8 +147,8 @@ main {
 
 .project-card {
   position: relative;
-  min-width: 250px;
-  min-height: 200px;
+  min-width: 275px;
+  min-height: 220px;
   box-shadow:
   0 2px 4px rgba(0, 0, 0, 0.06),
   0 6px 12px rgba(0, 0, 0, 0.06);
