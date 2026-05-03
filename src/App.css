@@ -439,15 +439,21 @@ main {
 .section-title {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
 }
 
-.section-icon {
-  width: 18px;
-  height: 18px;
-  color: #666;
+.resume-education {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14.5px;
+  color: #444;
 }
 
+.resume-education div {
+  line-height: 1.6;
+}
+  
 .project-card {
   position: relative;
   min-width: 310px;
