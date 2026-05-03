@@ -285,6 +285,7 @@ export default function App() {
       <TopRibbon />
       <About />
       <Projects />
+       <Resume />
     </main>
   );
 }
