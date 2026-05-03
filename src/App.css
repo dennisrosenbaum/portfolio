@@ -44,18 +44,16 @@ main {
   color: #111;
 }
 
-.nav-links {
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-  color: #555;
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
-.nav-links a:hover,
-.contact-section a:hover {
-  opacity: 0.6;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.nav-links a:hover {
+  transform: translateY(-1.5px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
 }
 
 .about-section {
