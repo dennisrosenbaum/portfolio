@@ -101,7 +101,6 @@ function Projects() {
 
   return (
     <section className="section-block projects-section">
-      <div className="page-break"></div>
 
       <div className="section-heading project-heading-row">
         <h2>Projects</h2>
