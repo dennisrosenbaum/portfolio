@@ -141,6 +141,8 @@ main {
   gap: 18px;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
+
+  padding: 12px 0; /* 👈 THIS FIXES IT */
 }
 
 .project-card {
