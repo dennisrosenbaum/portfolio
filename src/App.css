@@ -254,7 +254,7 @@ main {
 }
 
 .sub-brand {
-  font-size: 8px;           /* ⬅️ smaller */
+  font-size: 10px;           /* ⬅️ smaller */
   color: #555;              /* charcoal grey */
   margin-top: 4px;
   letter-spacing: 0.6px;    /* slightly more refined */
