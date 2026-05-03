@@ -27,7 +27,10 @@ const projects = [
 function TopRibbon() {
   return (
     <header className="top-ribbon">
-      <a href="/" className="brand">Dennis Rosenbaum, CPA</a>
+      <div className="brand-block">
+        <a href="/" className="brand">Dennis Rosenbaum, CPA</a>
+        <div className="sub-brand">builder → translator → operator</div>
+      </div>
 
       <nav className="nav-links">
         <a href="/">home</a>
@@ -49,8 +52,6 @@ function TopRibbon() {
 function About() {
   return (
     <section className="about-section">
-      <h1>builder → translator → operator</h1>
-
       <div className="about-box">
         <p>
           This site is a practical showcase of the skills I bring to business
@@ -101,7 +102,6 @@ function Projects() {
 
   return (
     <section className="section-block projects-section">
-
       <div className="section-heading project-heading-row">
         <h2>Projects</h2>
 
