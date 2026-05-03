@@ -69,7 +69,7 @@ function About() {
         <div className="about-divider" />
 
         <p>
-          This portfolio was created to give you a sense of who I am—both
+          This portfolio was created to give you a sense of who I am, both
           professionally and personally. It reflects how I think, how I approach
           problems, and how I turn ideas into execution.
         </p>
