@@ -262,3 +262,47 @@ main {
   background: #ffffff;
   margin: 6px 0;
 }
+
+.resume-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.resume-capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.resume-company h4 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.resume-role {
+  margin-bottom: 20px;
+}
+
+.resume-role-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.resume-role-heading span {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .resume-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-role-heading {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
