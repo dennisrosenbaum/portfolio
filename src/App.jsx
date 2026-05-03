@@ -125,14 +125,6 @@ function Projects() {
   );
 }
 
-function Contact() {
-  return (
-    <section className="contact-section">
-      <a href="mailto:dennis@example.com">dennis@example.com</a>
-    </section>
-  );
-}
-
 export default function App() {
   return (
     <main>
