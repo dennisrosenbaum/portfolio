@@ -155,9 +155,9 @@ function Resume() {
             data-driven strategy.
           </p>
         </div>
+      </div>
 
-        <div className="resume-divider" />
-
+      <div className="resume-card">
         <div className="resume-section-block">
           <h3>Education & Certification</h3>
           <ul className="resume-list">
@@ -165,9 +165,9 @@ function Resume() {
             <li>B.S. Finance — University of Central Florida</li>
           </ul>
         </div>
+      </div>
 
-        <div className="resume-divider" />
-
+      <div className="resume-card">
         <div className="resume-section-block">
           <h3>Core Capabilities</h3>
 
@@ -199,9 +199,9 @@ function Resume() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="resume-divider" />
-
+      <div className="resume-card">
         <div className="resume-section-block">
           <h3>Professional Experience</h3>
 
@@ -259,7 +259,6 @@ function Resume() {
     </section>
   );
 }
-
 function ResumeRole({ title, dates, bullets }) {
   return (
     <div className="resume-role">
