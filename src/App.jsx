@@ -305,13 +305,8 @@ function ResumeRole({ title, dates, bullets }) {
   return (
     <div className="resume-role">
       <div className="resume-role-grid">
-        
-        {/* LEFT COLUMN (DATES) */}
-        <div className="resume-role-dates">
-          {dates}
-        </div>
+        <div className="resume-role-dates">{dates}</div>
 
-        {/* RIGHT COLUMN (CONTENT) */}
         <div className="resume-role-content">
           <h4>{title}</h4>
 
@@ -321,7 +316,6 @@ function ResumeRole({ title, dates, bullets }) {
             ))}
           </ul>
         </div>
-
       </div>
     </div>
   );
