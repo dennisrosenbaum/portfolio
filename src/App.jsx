@@ -55,15 +55,17 @@ function About() {
         <h2>Welcome 👋</h2>
       </div>
 
-      <div className="about-box">
-        <p>
-          This site was built entirely using ChatGPT as part of my effort to deepen my understanding of AI and expand my technical skill set. While I’m not a traditional programmer, I’m a data-driven finance professional who enjoys building, learning, and solving complex business problems.
-        </p>
+      <<div className="about-box">
+  <p>
+    This site was built entirely using ChatGPT as part of my effort to deepen my understanding of AI and expand my technical skill set. While I’m not a traditional programmer, I’m a data-driven finance professional who enjoys building, learning, and solving complex business problems.
+  </p>
 
-        <p>
-          This portfolio was created to give you a sense of who I am—both professionally and personally. It reflects how I think, how I approach problems, and how I turn ideas into execution.
-        </p>
-      </div>
+  <br />
+
+  <p>
+    This portfolio was created to give you a sense of who I am—both professionally and personally. It reflects how I think, how I approach problems, and how I turn ideas into execution.
+  </p>
+</div>
     </section>
   );
 }
