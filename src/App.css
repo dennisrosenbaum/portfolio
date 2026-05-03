@@ -238,3 +238,15 @@ main {
     min-width: 280px;
   }
 }
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-brand {
+  font-size: 9px; /* within your 8–10 target */
+  color: #666;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
