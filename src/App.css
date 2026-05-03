@@ -483,3 +483,10 @@ main {
   border-radius: 999px;
   background: var(--accent);
 }
+
+  .signature {
+  width: 140px;
+  margin-top: 4px;
+  margin-left: 2px;
+  opacity: 0.8;
+}
