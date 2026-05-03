@@ -88,8 +88,8 @@ main {
 .about-box p {
   margin: 0;
   color: #333;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 12px; /* was 17px */
+  line-height: 1.7;
 }
 
 .section-block {
