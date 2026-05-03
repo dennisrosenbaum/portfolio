@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./App.css";
 
 const projects = [
@@ -33,6 +34,13 @@ function TopRibbon() {
         <a href="/resume">resume</a>
         <a href="/personal">personal</a>
         <a href="/projects">projects</a>
+        <a
+          href="https://www.linkedin.com/in/dennis-rosenbaum-a07137150/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          linkedin
+        </a>
       </nav>
     </header>
   );
@@ -41,15 +49,19 @@ function TopRibbon() {
 function About() {
   return (
     <section className="about-section">
-      <p className="eyebrow">finance • strategy • analytics</p>
       <h1>builder → translator → operator</h1>
-      <p className="about-copy">
-        I operate at the intersection of finance, sales strategy, and analytics—designing
-        performance frameworks that connect activity, pipeline, and pricing decisions directly
-        to revenue and margin outcomes. I architect the systems, models, and operating cadences
-        that drive it, enabling leadership to make better and faster decisions. The result is
-        measurable impact across complex, cross-functional environments.
-      </p>
+
+      <div className="about-box">
+        <p>
+          This site is a practical showcase of the skills I bring to business
+          strategy, finance, analytics, and operational execution. I am drawn to
+          data because it reveals how a business actually works — where performance
+          is created, where friction exists, and where better decisions can be made.
+          I bring a curious, action-oriented, and friendly-competitive mindset to
+          problem solving, with a bias toward building useful tools, connecting
+          ideas across teams, and turning insight into measurable business impact.
+        </p>
+      </div>
     </section>
   );
 }
@@ -76,14 +88,35 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
+  const carouselRef = useRef(null);
+
+  const scrollProjects = (direction) => {
+    if (!carouselRef.current) return;
+
+    carouselRef.current.scrollBy({
+      left: direction === "left" ? -340 : 340,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="section-block">
-      <div className="section-heading">
-        <p>selected work</p>
+    <section className="section-block projects-section">
+      <div className="page-break"></div>
+
+      <div className="section-heading project-heading-row">
         <h2>Projects</h2>
+
+        <div className="carousel-controls">
+          <button onClick={() => scrollProjects("left")} aria-label="Scroll projects left">
+            ←
+          </button>
+          <button onClick={() => scrollProjects("right")} aria-label="Scroll projects right">
+            →
+          </button>
+        </div>
       </div>
 
-      <div className="project-carousel">
+      <div className="project-carousel" ref={carouselRef}>
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
@@ -95,18 +128,7 @@ function Projects() {
 function Contact() {
   return (
     <section className="contact-section">
-      <p>Feel free to reach out.</p>
-
-      <div className="contact-links">
-        <a href="mailto:dennis@example.com">dennis@example.com</a>
-        <a
-          href="https://www.linkedin.com/in/dennis-rosenbaum-a07137150/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          linkedin
-        </a>
-      </div>
+      <a href="mailto:dennis@example.com">dennis@example.com</a>
     </section>
   );
 }
