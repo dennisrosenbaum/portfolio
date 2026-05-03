@@ -38,9 +38,10 @@ main {
 
 .brand {
   font-size: clamp(32px, 5vw, 58px);
-  font-weight: 500;
+  font-weight: 750;
   letter-spacing: -0.06em;
   line-height: 0.95;
+  color: #111;
 }
 
 .nav-links {
@@ -246,7 +247,7 @@ main {
 
 .sub-brand {
   font-size: 9px; /* within your 8–10 target */
-  color: #666;
+  color: #444;
   margin-top: 2px;
   letter-spacing: 0.5px;
 }
