@@ -64,9 +64,7 @@ function About() {
   return (
     <section className="section-block about-section">
       <div className="section-heading">
-        <h2>
-          Welcome <span className="wave">👋</span>
-        </h2>
+        <h2>👋 Welcome</h2>
       </div>
 
       <div className="about-box">
@@ -128,7 +126,7 @@ function Projects() {
   return (
     <section className="section-block projects-section">
       <div className="section-heading project-heading-row">
-        <h2>Projects 🗂️</h2>
+        <h2>🗂️ Projects</h2>
 
         <div className="carousel-controls">
           <button onClick={() => scrollProjects("left")} aria-label="Scroll projects left">
