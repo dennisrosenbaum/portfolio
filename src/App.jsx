@@ -41,7 +41,7 @@ function TopRibbon() {
           target="_blank"
           rel="noreferrer"
         >
-          linkedin
+          LinkedIn
         </a>
       </nav>
     </header>
