@@ -266,7 +266,7 @@ main {
 .resume-section {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* space between cards */
+  gap: 18px; /* controls space between cards */
 }
 
 .resume-card {
@@ -281,11 +281,14 @@ main {
 }
 
 .resume-section-block h3 {
-  margin: 0 0 14px;
-  font-size: 15px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: #333;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .resume-section-block p {
