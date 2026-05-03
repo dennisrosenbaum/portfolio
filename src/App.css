@@ -171,10 +171,10 @@ main {
 }
 
 .project-card h3 {
-  margin: 0 0 12px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  margin: 0 0 8px;          /* slightly tighter */
+  font-size: 17px;          /* ⬅️ smaller */
+  font-weight: 550;         /* slightly stronger since smaller */
+  letter-spacing: -0.02em;
 }
 
 .project-card p {
@@ -200,15 +200,17 @@ main {
 }
 
 .go-button {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
   border: none;
   background: transparent;
-  font-size: 26px;
+  font-size: 24px;
   cursor: pointer;
   padding: 0;
   color: #111;
 }
-
 .contact-section {
   border-top: 1px solid #eeeeee;
   padding: 42px 0 64px;
