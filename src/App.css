@@ -246,6 +246,7 @@ main {
   .about-box p {
     font-size: 16px;
   }
+}
 
 .brand-block {
   display: flex;
@@ -438,7 +439,7 @@ main {
 .section-title {
   display: flex;
   align-items: center;
-  gap: 15 px;
+  gap: 15px;
 }
 
 .section-icon {
