@@ -94,18 +94,25 @@ function ProjectCard({ project }) {
   return (
     <article
       className="project-card"
-      style={{ borderLeft: `4px solid ${project.color}` }}
+      style={{ "--accent": project.color }}
     >
       <div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
+
+        <div className="tag-row">
+          {project.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
       </div>
 
-      <button className="go-button">→</button>
+      <button className="go-button" aria-label={`Go to ${project.title}`}>
+        →
+      </button>
     </article>
   );
 }
-
 function Projects() {
   const carouselRef = useRef(null);
 
