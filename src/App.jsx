@@ -51,14 +51,13 @@ function TopRibbon() {
 function About() {
   return (
     <section className="about-section">
-      <div className="about-image">
+      <div className="about-box about-box-visual">
         <img
           src="/images/about-visual.jpeg"
-          alt="Data to insight visualization"
+          alt=""
+          className="about-background-image"
         />
-      </div>
 
-      <div className="about-box">
         <p>
           This site is a practical showcase of the skills I bring to business
           strategy, finance, analytics, and operational execution. I am drawn to
