@@ -1,9 +1,3 @@
-import {
-  User,
-  GraduationCap,
-  Briefcase,
-  BarChart3
-} from "lucide-react";
 import { useRef } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -153,9 +147,8 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-    <User className="section-icon" />
-    Executive Profile
-  </h2>
+  👤 Executive Profile
+</h2>
 </div>
 
         <div className="resume-card">
@@ -179,17 +172,16 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-    <GraduationCap className="section-icon" />
-    Education & Certification
-  </h2>
+  🎓 Education & Certification
+</h2>
 </div>
 
         <div className="resume-card">
           <div className="resume-section-block">
-            <ul className="resume-list">
-              <li>Certified Public Accountant (CPA) — State of Florida</li>
-              <li>B.S. Finance — University of Central Florida</li>
-            </ul>
+            <div className="resume-education">
+  <div>Certified Public Accountant (CPA) — State of Florida</div>
+  <div>B.S. Finance — University of Central Florida</div>
+</div>
           </div>
         </div>
       </div>
@@ -197,9 +189,8 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-    <BarChart3 className="section-icon" />
-    Core Capabilities
-  </h2>
+  📊 Core Capabilities
+</h2>
 </div>
 
         <div className="resume-card">
@@ -238,9 +229,8 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-    <Briefcase className="section-icon" />
-    Professional Experience
-  </h2>
+  💼 Professional Experience
+</h2>
 </div>
 
         <div className="resume-card">
