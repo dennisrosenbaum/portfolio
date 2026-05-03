@@ -38,7 +38,7 @@ main {
 
 .brand {
   font-size: clamp(32px, 5vw, 58px);
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: -0.06em;
   line-height: 0.95;
   color: #111;
@@ -246,7 +246,7 @@ main {
 }
 
 .sub-brand {
-  font-size: 9px; /* within your 8–10 target */
+  font-size: 10px; /* within your 8–10 target */
   color: #444;
   margin-top: 2px;
   letter-spacing: 0.5px;
