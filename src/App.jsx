@@ -77,6 +77,17 @@ function About() {
           professionally and personally. It reflects how I think, how I approach
           problems, and how I turn ideas into execution.
         </p>
+
+         <div className="about-divider" />
+
+        <p>
+          Thanks for visiting - I appreciate your time.
+        </p>
+         <img 
+          src="/signature.png" 
+          alt="Dennis Rosenbaum signature" 
+          className="signature"
+        />
       </div>
     </section>
   );
