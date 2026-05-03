@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 const projects = [
@@ -28,14 +29,14 @@ function TopRibbon() {
   return (
     <header className="top-ribbon">
       <div className="brand-block">
-        <a href="/" className="brand">Dennis Rosenbaum, CPA</a>
+        <Link to="/" className="brand">Dennis Rosenbaum, CPA</Link>
         <div className="sub-brand">builder → translator → operator</div>
       </div>
 
       <nav className="nav-links">
-        <a href="/resume">resume</a>
-        <a href="/personal">personal</a>
-        <a href="/projects">projects</a>
+        <Link to="/resume">resume</Link>
+        <Link to="/personal">personal</Link>
+        <Link to="/projects">projects</Link>
         <a
           href="https://www.linkedin.com/in/dennis-rosenbaum-a07137150/"
           target="_blank"
@@ -135,12 +136,26 @@ function Projects() {
   );
 }
 
-export default function App() {
+function Home() {
   return (
-    <main>
-      <TopRibbon />
+    <>
       <About />
       <Projects />
-    </main>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <main>
+        <TopRibbon />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
