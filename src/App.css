@@ -264,10 +264,10 @@ main {
 }
 
 .resume-section {
-  margin-top: 36px;
+  margin: 36px 0 64px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 36px; /* ⬅️ increase this */
 }
 
 .resume-card {
