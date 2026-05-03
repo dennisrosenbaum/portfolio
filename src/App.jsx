@@ -1,3 +1,9 @@
+import {
+  User,
+  GraduationCap,
+  Briefcase,
+  BarChart3
+} from "lucide-react";
 import { useRef } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
