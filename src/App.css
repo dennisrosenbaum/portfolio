@@ -147,6 +147,8 @@ main {
 
 .project-card {
   position: relative;
+  min-width: 250px;
+  min-height: 200px;
   box-shadow:
   0 2px 4px rgba(0, 0, 0, 0.06),
   0 6px 12px rgba(0, 0, 0, 0.06);
@@ -237,11 +239,6 @@ main {
   .about-box p {
     font-size: 16px;
   }
-
-  .project-card {
-    min-width: 280px;
-  }
-}
 
 .brand-block {
   display: flex;
