@@ -76,20 +76,12 @@ main {
   padding: 26px 28px;
   background: #ffffff;
   border: 1px solid #e9e9e9;
-  border-radius: 10px; /* crisper corners (was 22px) */
+  border-radius: 12px;
 
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 6px 16px rgba(0, 0, 0, 0.06);
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.about-box:hover {
-  transform: translateY(-2px);
+  /* use the stronger shadow as default */
   box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.06),
-    0 10px 22px rgba(0, 0, 0, 0.08);
+    0 12px 26px rgba(0, 0, 0, 0.10);
 }
 
 .about-box p {
@@ -158,8 +150,8 @@ main {
 
   padding: 24px;
   background: #ffffff;
-  border: 1px solid #e9e9e9;
-  border-radius: 10px; /* match about box */
+  border: 1px solid #ececec;
+  border-radius: 12px;
 
   display: flex;
   flex-direction: column;
@@ -167,19 +159,12 @@ main {
 
   scroll-snap-align: start;
 
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 6px 16px rgba(0, 0, 0, 0.06);
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-3px);
+  /* use elevated style as default */
   box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.06),
     0 12px 26px rgba(0, 0, 0, 0.10);
 }
+
 
 .project-card h3 {
   margin: 0 0 12px;
