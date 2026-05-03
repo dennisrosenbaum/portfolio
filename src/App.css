@@ -38,7 +38,7 @@ main {
 
 .brand {
   font-size: clamp(32px, 5vw, 58px);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 0.95;
   color: #111;
