@@ -148,6 +148,7 @@ main {
 }
 
 .project-card::before {
+  background: var(--accent);
   content: "";
   position: absolute;
   left: 0;
