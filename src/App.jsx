@@ -136,15 +136,6 @@ function Projects() {
   );
 }
 
-function Home() {
-  return (
-    <>
-      <About />
-      <Projects />
-    </>
-  );
-}
-
 function Resume() {
   return (
     <section className="section-block resume-section">
@@ -290,6 +281,15 @@ function ResumeRole({ title, dates, bullets }) {
   );
 }
 
+function Home() {
+  return (
+    <>
+      <About />
+      <Projects />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -300,6 +300,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
+
       </main>
     </BrowserRouter>
   );
