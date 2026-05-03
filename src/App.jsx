@@ -52,7 +52,7 @@ function About() {
   return (
     <section className="section-block about-section">
       <div className="section-heading">
-        <h2>Welcome</h2>
+        <h2>Welcome 👋</h2>
       </div>
 
       <div className="about-box">
