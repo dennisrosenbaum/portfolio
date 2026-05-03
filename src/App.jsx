@@ -84,7 +84,7 @@ function About() {
           Thanks for visiting - I appreciate your time.
         </p>
          <img 
-          src="/signature.png" 
+          src="/images/signature.png" 
           alt="Dennis Rosenbaum signature" 
           className="signature"
         />
