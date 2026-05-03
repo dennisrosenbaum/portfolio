@@ -63,42 +63,29 @@ main {
 }
 
 .about-section {
-  max-width: 1000px;
-  margin: 58px auto 100px;
-}
-
-.about-box {
-  position: relative;
-  overflow: hidden;
-  margin: 34px auto 0;
-  padding: 42px 46px;
-  background: #f6f3ed;
-  border: 1px solid #ebe5da;
-  border-radius: 24px;
+  max-width: 100%;
+  margin: 58px 0 100px;
   text-align: left;
 }
 
-.about-box-visual p {
-  position: relative;
-  z-index: 2;
+.about-section .section-heading {
+  margin-bottom: 26px;
+}
+
+.about-box {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 22px;
+  text-align: left;
+}
+
+.about-box p {
   margin: 0;
-  color: #333;
+  color: #555;
   font-size: 15px;
-  line-height: 1.7;
-  max-width: 760px;
+  line-height: 1.65;
 }
-
-.about-background-image {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 420px;
-  opacity: 0.09;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .section-block {
   margin-bottom: 110px;
 }
