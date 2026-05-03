@@ -131,7 +131,6 @@ export default function App() {
       <TopRibbon />
       <About />
       <Projects />
-      <Contact />
     </main>
   );
 }
