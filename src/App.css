@@ -484,15 +484,15 @@ main {
 }
 
   .signature {
-  width: 25px;     /* adjust this number until it feels right */
-  height: auto;    /* keeps proportions correct */
-  margin-top: 4px;
+  width: 130px;
+  height: auto;
+  margin-top: 10px;
   margin-bottom: 0;
-  opacity: 0.8;
+  opacity: 0.85;
   display: block;
 }
 
-  .about-box img.signature {
+.about-box img.signature {
   margin-bottom: 0;
 }
 
