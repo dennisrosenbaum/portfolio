@@ -190,8 +190,10 @@ function Resume() {
         <div className="resume-card">
           <div className="resume-section-block">
            <div className="resume-education">
-  <p>Certified Public Accountant (CPA) — State of Florida</p>
-  <p>B.S. Finance — University of Central Florida</p>
+  <p>
+    Certified Public Accountant (CPA) — State of Florida &nbsp;|&nbsp; 
+    B.S. Finance — University of Central Florida
+  </p>
 </div>
           </div>
         </div>
