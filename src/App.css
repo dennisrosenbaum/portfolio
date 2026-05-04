@@ -485,8 +485,14 @@ main {
 }
 
   .signature {
-  width: 140px;
-  margin-top: 4px;
-  margin-left: 2px;
+  display: block;
+  width: 110px;        /* smaller */
+  margin-top: 4px;     /* tight to text */
+  margin-bottom: 0;    /* removes extra space below */
+  margin-left: 0;      /* ensures left alignment */
   opacity: 0.8;
+}
+
+  .about-box img.signature {
+  margin-bottom: 0;
 }
