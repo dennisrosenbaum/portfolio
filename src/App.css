@@ -431,9 +431,7 @@ main {
 }
 
 .resume-section-group {
-  display: flex;
-  flex-direction: column;
-  gap: 18px; /* space between header and card */
+  gap: 0; /* or remove entirely */
 }
 
 .section-title {
