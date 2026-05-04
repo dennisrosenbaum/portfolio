@@ -419,6 +419,7 @@ main {
     grid-template-columns: 1fr;
     gap: 22px;
   }
+}
 
 @media (max-width: 760px) {
   .resume-role-grid {
