@@ -446,12 +446,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 14.5px;
-  color: #444;
 }
 
 .resume-education div {
-  line-height: 1.6;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
 }
   
 .project-card {
