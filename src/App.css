@@ -485,12 +485,12 @@ main {
 }
 
   .signature {
-  display: block;
-  width: 110px;        /* smaller */
-  margin-top: 4px;     /* tight to text */
-  margin-bottom: 0;    /* removes extra space below */
-  margin-left: 0;      /* ensures left alignment */
+  width: 60px;     /* adjust this number until it feels right */
+  height: auto;    /* keeps proportions correct */
+  margin-top: 4px;
+  margin-bottom: 0;
   opacity: 0.8;
+  display: block;
 }
 
   .about-box img.signature {
