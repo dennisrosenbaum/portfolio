@@ -485,7 +485,7 @@ main {
 }
 
   .signature {
-  width: 60px;     /* adjust this number until it feels right */
+  width: 25px;     /* adjust this number until it feels right */
   height: auto;    /* keeps proportions correct */
   margin-top: 4px;
   margin-bottom: 0;
