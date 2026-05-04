@@ -496,3 +496,7 @@ main {
   .about-box img.signature {
   margin-bottom: 0;
 }
+
+  .resume-section-group .section-heading {
+  margin-bottom: 26px;
+}
