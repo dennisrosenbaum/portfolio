@@ -335,6 +335,80 @@ function Home() {
   );
 }
 
+function KPIFrameworkProject() {
+  return (
+    <section className="section-block project-detail-section">
+      <div className="section-heading">
+        <h2>Sales KPI Framework 📊</h2>
+      </div>
+
+      <div className="project-detail-card">
+        <p className="project-detail-intro">
+          Designed a seller performance framework connecting activity, pipeline,
+          revenue growth, margin, and share of wallet into a single operating
+          model for sales leadership.
+        </p>
+      </div>
+
+      <div className="project-detail-grid">
+        <div className="project-detail-card">
+          <h3>Problem</h3>
+          <p>
+            Sales performance was being evaluated through disconnected metrics,
+            making it difficult to understand whether outcomes were driven by
+            activity, pipeline quality, account coverage, or broader market
+            conditions.
+          </p>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Approach</h3>
+          <p>
+            Built a driver-based KPI model that translated seller behaviors into
+            measurable business indicators. The framework connected leading
+            indicators, like first appointments and account touches, to lagging
+            outcomes like sales growth, margin, and share of wallet.
+          </p>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Solution</h3>
+          <ul>
+            <li>Power BI dashboard for seller, manager, and leadership views</li>
+            <li>Team-average benchmarking for performance context</li>
+            <li>Threshold logic for minimum acceptable performance</li>
+            <li>Pipeline sufficiency and sales activity visibility</li>
+            <li>Executive-ready KPI summaries by period and year-to-date</li>
+          </ul>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Impact</h3>
+          <ul>
+            <li>Created a consistent performance management language</li>
+            <li>Improved visibility into coaching opportunities</li>
+            <li>Reduced dependence on ad hoc reporting</li>
+            <li>Enabled leadership to connect behavior, pipeline, and results</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="project-detail-card">
+        <h3>Tools & Skills Demonstrated</h3>
+        <div className="resume-tags">
+          <span>Power BI</span>
+          <span>DAX</span>
+          <span>SQL</span>
+          <span>Salesforce Analytics</span>
+          <span>KPI Design</span>
+          <span>Sales Strategy</span>
+          <span>Executive Reporting</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -344,9 +418,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/projects/kpi-framework" element={<KPIFrameworkProject />} />
         </Routes>
 
       </main>
     </BrowserRouter>
   );
 }
+
+
