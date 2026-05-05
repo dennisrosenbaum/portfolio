@@ -159,7 +159,7 @@ function Projects() {
 
 function Resume() {
   useEffect(() => {
-  document.title = "Resume | DR";
+  document.title = "Resume | Dennis Rosenbaum";
 }, []);
   return (
     <section className="section-block resume-section">
@@ -332,7 +332,7 @@ function ResumeRole({ title, dates, bullets }) {
 
 function Home() {
   useEffect(() => {
-  document.title = "Home | DR";
+  document.title = "Dennis Rosenbaum | Finance & Strategy";
 }, []);
   return (
     <>
@@ -344,7 +344,7 @@ function Home() {
 
 function KPIFrameworkProject() {
   useEffect(() => {
-    document.title = "KPI Framework | DR";
+    document.title = "KPI Framework | Dennis Rosenbaum";
   }, []);
   return (
     <section className="section-block project-detail-section">
