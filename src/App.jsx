@@ -14,6 +14,7 @@ const projects = [
     description: "A seller performance model connecting activity, pipeline, and outcomes.",
     color: "#10b981", // green
     tags: ["Finance", "Sales Strategy", "Power BI"],
+    link: "/projects/kpi-framework",
   },
   {
     title: "Customer Business Dashboard",
@@ -110,9 +111,12 @@ function ProjectCard({ project }) {
         </div>
       </div>
 
-      <button className="go-button" aria-label={`Go to ${project.title}`}>
-        →
-      </button>
+      <button
+  className="go-button"
+  onClick={() => window.location.href = project.link}
+>
+  →
+</button>
     </article>
   );
 }
