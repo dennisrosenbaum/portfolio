@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
@@ -157,6 +158,9 @@ function Projects() {
 }
 
 function Resume() {
+  useEffect(() => {
+  document.title = "Resume | Dennis Rosenbaum";
+}, []);
   return (
     <section className="section-block resume-section">
       <div className="resume-section-group">
@@ -327,6 +331,9 @@ function ResumeRole({ title, dates, bullets }) {
 }
 
 function Home() {
+  useEffect(() => {
+  document.title = "Dennis Rosenbaum | Finance & Strategy";
+}, []);
   return (
     <>
       <About />
@@ -336,6 +343,9 @@ function Home() {
 }
 
 function KPIFrameworkProject() {
+  useEffect(() => {
+    document.title = "KPI Framework | Dennis Rosenbaum";
+  }, []);
   return (
     <section className="section-block project-detail-section">
       <div className="section-heading">
