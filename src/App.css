@@ -30,6 +30,11 @@ main {
   margin: 0 auto;
 }
 
+.customer-dashboard-page {
+  width: min(1600px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
 .top-ribbon {
   display: flex;
   justify-content: space-between;
