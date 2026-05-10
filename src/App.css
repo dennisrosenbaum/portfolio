@@ -518,8 +518,6 @@ main {
 .project-detail-card {
   padding: 28px 32px;
   background: #ffffff;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #ececec;
   border-radius: 12px;
   box-shadow:
@@ -559,9 +557,8 @@ main {
 }
 
 .project-detail-card ul {
-  padding-left: 20px;
-  margin-top: 14px;
-  width: 100%;
+  margin: 0;
+  padding-left: 18px;
 }
 
 @media (max-width: 760px) {
@@ -645,12 +642,4 @@ main {
 
 .project-card-purple {
   background: #f7f4ff;
-}
-
-
-
-.project-detail-card li {
-  width: 100%;
-  line-height: 1.6;
-  margin-bottom: 8px;
 }
