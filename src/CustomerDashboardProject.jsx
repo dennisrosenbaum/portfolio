@@ -195,7 +195,7 @@ function Shell({ page, setPage, children }) {
         </nav>
       </aside>
 
-      <div className="ml-[185px] pt-6">
+      <div className="ml-[185px] pt-2">
         <div className="p-3">{children}</div>
       </div>
     </div>
@@ -290,7 +290,7 @@ export default function CustomerDashboardProject() {
   <>
     <section className="project-case-study">
       <div className="section-heading">
-        <h2>Customer Business Dashboard 🖥️</h2>
+        <h2>Customer Business Dashboard <span>🖥️</span></h2>
       </div>
 
       <div className="project-detail-card">
