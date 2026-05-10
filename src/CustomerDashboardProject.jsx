@@ -166,7 +166,6 @@ function Shell({ page, setPage, children, showFooterTabs = false }) {
       <aside className="absolute left-0 top-6 z-10 h-[calc(760px-24px)] w-[214px] border-r border-gray-200 bg-white shadow-md">
         <div className="flex h-[50px] items-center gap-2 border-b border-gray-100 px-4">
           <span className="text-2xl font-bold text-[#e1261c]">▱ ABC Inc.</span>
-          <span className="border-l pl-2 text-xs font-semibold text-gray-700">Technology<br />Solutions</span>
         </div>
         <nav>
           {navItems.map((item) => {
