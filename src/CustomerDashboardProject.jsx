@@ -290,7 +290,7 @@ export default function CustomerDashboardProject() {
   <>
     <section className="project-case-study">
       <div className="section-heading">
-        <h2>Customer Business Dashboard <span>🖥️</span></h2>
+        <h2>🖥️ Customer Business Dashboard </h2>
       </div>
 
       <div className="project-detail-card">
@@ -302,7 +302,7 @@ export default function CustomerDashboardProject() {
       </div>
 
       <div className="project-detail-grid">
-        <div className="project-detail-card">
+        <div className="project-detail-card-blue">
           <h3>Business Problem</h3>
 
           <p>
@@ -313,7 +313,7 @@ export default function CustomerDashboardProject() {
           </p>
         </div>
 
-        <div className="project-detail-card">
+        <div className="project-detail-card-purple">
           <h3>Solution</h3>
 
           <p>
@@ -324,7 +324,7 @@ export default function CustomerDashboardProject() {
           </p>
         </div>
 
-        <div className="project-detail-card">
+        <div className="project-detail-card-amber">
           <h3>Key Features</h3>
 
           <ul>
@@ -336,7 +336,7 @@ export default function CustomerDashboardProject() {
           </ul>
         </div>
 
-        <div className="project-detail-card">
+        <div className="project-detail-card-green">
           <h3>Business Impact</h3>
 
           <ul>
