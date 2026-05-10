@@ -576,10 +576,6 @@ main {
     0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.customer-dashboard-demo main {
-  width: auto;
-  margin: 0;
-}
 
 .customer-dashboard-shell {
   font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
