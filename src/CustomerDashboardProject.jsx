@@ -302,7 +302,7 @@ export default function CustomerDashboardProject() {
       </div>
 
       <div className="project-detail-grid">
-        <div className="project-detail-card-blue">
+        <div className="project-detail-card project-card-blue">
           <h3>Business Problem</h3>
 
           <p>
@@ -313,7 +313,7 @@ export default function CustomerDashboardProject() {
           </p>
         </div>
 
-        <div className="project-detail-card-purple">
+        <div className="project-detail-card project-card-purple">
           <h3>Solution</h3>
 
           <p>
@@ -324,7 +324,7 @@ export default function CustomerDashboardProject() {
           </p>
         </div>
 
-        <div className="project-detail-card-amber">
+        <div className="project-detail-card project-card-amber">
           <h3>Key Features</h3>
 
           <ul>
@@ -336,7 +336,7 @@ export default function CustomerDashboardProject() {
           </ul>
         </div>
 
-        <div className="project-detail-card-green">
+        <div className="project-detail-card project-card-green">
           <h3>Business Impact</h3>
 
           <ul>
