@@ -327,7 +327,7 @@ export default function CustomerDashboardProject() {
         <div className="project-detail-card project-card-amber">
           <h3>Key Features</h3>
 
-          <p>
+          <ul>
             <li>• Purchase order and invoice visibility</li>
             <li>• Inventory and stock coverage monitoring</li>
             <li>• Shipment tracking and fulfillment insights</li>
