@@ -622,3 +622,8 @@ main {
 .section-heading h2 span {
   margin-left: 10px;
 }
+
+.project-detail-card p,
+.project-detail-card li {
+  line-height: 1.5;
+}
