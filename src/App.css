@@ -588,10 +588,10 @@ main {
 }
 
 .project-case-study {
+  margin: 28px 0 42px;
   display: flex;
   flex-direction: column;
   gap: 22px;
-  margin-bottom: 42px;
 }
 
 .project-detail-grid {
@@ -626,4 +626,20 @@ main {
 .project-detail-card p,
 .project-detail-card li {
   line-height: 1.5;
+}
+
+.project-card-blue {
+  background: #f3f7ff;
+}
+
+.project-card-green {
+  background: #f3fbf7;
+}
+
+.project-card-amber {
+  background: #fffaf0;
+}
+
+.project-card-purple {
+  background: #f7f4ff;
 }
