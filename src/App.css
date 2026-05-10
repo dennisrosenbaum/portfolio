@@ -31,7 +31,8 @@ main {
 }
 
 .customer-dashboard-page {
-  width: min(1600px, calc(100% - 40px));
+  width: calc(100% - 40px);
+  max-width: 1700px;
   margin: 0 auto;
 }
 
