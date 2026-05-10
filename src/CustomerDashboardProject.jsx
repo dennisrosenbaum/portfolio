@@ -180,9 +180,9 @@ function Shell({ page, setPage, children, showFooterTabs = false }) {
           })}
         </nav>
       </aside>
-      <main className="ml-[214px] pt-6">
-        <div className="p-3">{children}</div>
-      </main>
+      <div className="ml-[214px] pt-6">
+  <div className="p-3">{children}</div>
+</div>
       {showFooterTabs && (
         <div className="absolute bottom-0 left-0 right-0 z-30 ml-[0px] flex h-[39px] bg-white text-xs shadow-[0_-1px_3px_rgba(0,0,0,0.15)]">
           {["Purchase Orders", "Invoices", "Inventory", "Accounts Payable", "Asset Lookup", "Shipment Tracking", "Report Library"].map((t) => (
