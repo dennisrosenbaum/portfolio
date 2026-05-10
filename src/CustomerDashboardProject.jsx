@@ -161,9 +161,9 @@ function Filter({ label, wide }) {
 
 function Shell({ page, setPage, children, showFooterTabs = false }) {
   return (
-    <div className="customer-dashboard-shell relative h-[760px] overflow-hidden bg-[#eef2f6] text-[12px] text-black" style={{ fontFamily: "Aptos, Arial, sans-serif" }}>
+    <div className="customer-dashboard-shell relative h-[920px] overflow-hidden bg-[#eef2f6] text-[12px] text-black" style={{ fontFamily: "Aptos, Arial, sans-serif" }}>
       <div className="absolute left-0 right-0 top-0 z-20 h-6 bg-[#5d5a5a] px-7 text-[11px] font-bold leading-6 text-white">Last Refreshed: 04/06/2026 5:00 AM EST</div>
-      <aside className="absolute left-0 top-6 z-10 h-[calc(760px-24px)] w-[214px] border-r border-gray-200 bg-white shadow-md">
+      <aside className="absolute left-0 top-4 z-10 h-[calc(760px-24px)] w-[185px] border-r border-gray-200 bg-white shadow-md">
         <div className="flex h-[50px] items-center gap-2 border-b border-gray-100 px-4">
           <span className="text-2xl font-bold text-[#e1261c]">▱ ABC Inc.</span>
         </div>
@@ -180,7 +180,7 @@ function Shell({ page, setPage, children, showFooterTabs = false }) {
           })}
         </nav>
       </aside>
-      <div className="ml-[214px] pt-6">
+      <div className="ml-[185px] pt-6">
   <div className="p-3">{children}</div>
 </div>
       {showFooterTabs && (
@@ -210,7 +210,7 @@ function HomePage() {
       </Card>
       <Card className="p-4">
         <h2 className="mb-6 text-lg font-semibold">Weekly Activity</h2>
-        <div className="grid grid-cols-2 gap-6 px-3">
+        <div className="grid grid-cols-2 gap-4 px-3">
           <MetricTile title="SPEND" value="$53,524" subtitle="Total" bullets={["This Month: $81,406", "vs. Last Month: 81%"]} />
           <MetricTile title="PURCHASE ORDERS" value="5" subtitle="Received" bullets={["Avg Order Size: $10,705", "On Backorder: 0"]} />
           <MetricTile title="SHIPMENTS" value="2" subtitle="Orders Shipped Complete" bullets={["Orders Partially Fulfilled: 1", "Avg Business Days to Ship: 1.0"]} />
@@ -234,7 +234,7 @@ function HomePage() {
 }
 
 function MetricTile({ title, value, subtitle, bullets }) {
-  return <div className="h-[230px] border border-gray-200 bg-white"><div className="bg-[#df231f] py-2 text-center text-sm font-bold text-white">{title}</div><div className="flex h-[138px] flex-col items-center justify-center"><div className="text-4xl font-light text-gray-800">{value}</div><div className="mt-1 text-xs text-gray-600">{subtitle}</div></div><div className="px-3 text-xs leading-6 text-gray-600">{bullets.map(b => <div key={b}>• {b}</div>)}</div></div>
+  return <div className="h-[230px] border border-gray-200 bg-white"><div className="bg-[#df231f] py-2 text-center text-sm font-bold text-white">{title}</div><div className="flex h-[138px] flex-col items-center justify-center"><div className="text-2xl font-light text-gray-800">{value}</div><div className="mt-1 text-xs text-gray-600">{subtitle}</div></div><div className="px-3 text-xs leading-6 text-gray-600">{bullets.map(b => <div key={b}>• {b}</div>)}</div></div>
 }
 
 function InsightsPage() {
@@ -255,7 +255,7 @@ function InfoBlock({rows}) { return <div>{rows.map(([a,b])=><div key={a} classNa
 function SimpleTable({columns,rows,darkHeader}) { return <table className="w-full border-collapse text-xs"><thead><tr className={darkHeader?"bg-[#5f5c5c] text-white":"border-b"}>{columns.map(c=><th key={c} className="px-2 py-3">{c}</th>)}</tr></thead><tbody>{rows.map((r,i)=><tr key={i} className="border-b bg-white">{r.map((c,j)=><td key={j} className="px-2 py-2 text-center font-normal">{c}</td>)}</tr>)}</tbody></table> }
 
 function InventoryDetail() {return <Card className="min-h-[633px] p-4"><h1 className="text-lg font-semibold">SKU Detail</h1><div className="mt-10 grid grid-cols-2 gap-8"><div><InfoBlock rows={[["SKU:","Apple SKU 2"],["Manufacturer:","APPLE"],["Part Number:","APPLE-002"],["Description:","Apple USB-C Dock"]]}/><h2 className="mt-8 text-lg font-semibold">Shipments by Location</h2><div className="text-xs">Last 365 Days</div><div className="relative mt-1 h-[420px] overflow-hidden bg-gray-200"><div className="absolute inset-0 flex items-center justify-center text-2xl tracking-widest text-gray-400">UNITED STATES</div><div className="absolute left-[48%] top-[55%] h-12 w-12 rounded-full bg-[#df231f] opacity-95"></div><div className="absolute right-[16%] top-[34%] h-3 w-3 rounded-full bg-[#df231f]"></div></div></div><div className="border-l pl-8"><h2 className="text-lg font-semibold">Product Quantities</h2><div className="mt-10 grid grid-cols-3 text-center"><BigStat label="On-Hand" value="5"/><BigStat label="In-Transit to Warehouses" value="71"/><BigStat label="Total" value="76"/></div><div className="mt-10"><SimpleTable columns={["DELAWARE","GEORGIA","MISSOURI","STS-TRG","STS-CROSSCOM","STS-HTG","STS-ASI"]} rows={[[0,0,0,0,0,0,0]]}/></div><h2 className="mt-16 text-lg font-semibold">Weekly Usage vs. On Hand</h2><div className="text-xs">Last 6 Weeks</div><ResponsiveContainer width="100%" height={240}><LineChart data={[{m:"Jul 2024",u:34,s:5},{m:"Jan 2025",u:61,s:5},{m:"Oct 2025",u:90,s:5},{m:"Apr 2026",u:12,s:5}]} margin={{top:25,right:25,left:5,bottom:0}}><CartesianGrid strokeDasharray="3 3"/><XAxis dataKey="m" fontSize={11}/><YAxis fontSize={11}/><Tooltip/><Legend/><Line dataKey="u" name="Weekly Units Purchased" stroke={RED} strokeWidth={3} dot={false}/><Line dataKey="s" name="Units In Stock" stroke="#777" strokeDasharray="4 4" strokeWidth={3} dot={false}/></LineChart></ResponsiveContainer></div></div><button className="float-right mt-4 rounded-xl border bg-white px-10 py-4 text-gray-600 shadow-sm">Return to Previous Page</button></Card>}
-function BigStat({label,value}) {return <div><div className="text-base text-gray-500">{label}</div><div className="mt-3 text-4xl font-light text-gray-800">{value}</div></div>}
+function BigStat({label,value}) {return <div><div className="text-base text-gray-500">{label}</div><div className="mt-3 text-2xl font-light text-gray-800">{value}</div></div>}
 
 function ReportsPage(){const reports=["OPEN ORDERS REPORT","ACCOUNTS PAYABLE REPORT","SPEND & USAGE REPORT","ASSET SERIAL NUMBER REPORT","STOCKED PRODUCTS & INVENTORY REPORT","SHIPPING & TRACKING NUMBER REPORT"];return <div className="grid grid-cols-2 gap-4">{reports.map((r,i)=><Card key={r} className="h-[188px] p-4"><b>{r}</b><p className="mt-5 max-w-2xl leading-5">{["The open orders report provides a detailed view of all orders that have been placed but not yet shipped or billed. It includes key information such as product details, quantities ordered, expected ship dates, and current order status.","The accounts payable report offers a comprehensive overview of outstanding invoices and their payment status. It includes details such as invoice numbers, due dates, amounts owed, and payment aging buckets.","The standard usage report provides a comprehensive summary of all billed transactions within the selected period. It includes key details such as product descriptions, quantities billed, shipment tracking numbers, and device serial numbers.","The asset serial number report provides a line-level view of all shipped products with their associated device serial numbers. It includes details such as order numbers, product descriptions, and corresponding invoice information.","The stocked products and inventory report provides a clear snapshot of all items currently available in your inventory. It highlights available quantities, incoming shipments, recent usage trends, and stock coverage.","The shipping and tracking number report consolidates all outbound shipment details to provide end-to-end delivery visibility. It includes tracking numbers, carrier information, ship dates, and ship-to locations."][i]}</p><a className="float-right mt-8 text-blue-600 underline">Click to View Report --&gt;</a></Card>)}</div>}
 
