@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import CustomerDashboardProject from "./CustomerDashboardProject";
 
 const projects = [
   {
