@@ -327,12 +327,12 @@ export default function CustomerDashboardProject() {
         <div className="project-detail-card project-card-amber">
           <h3>Key Features</h3>
 
-          <ul>
-            <li>Purchase order and invoice visibility</li>
-            <li>Inventory and stock coverage monitoring</li>
-            <li>Shipment tracking and fulfillment insights</li>
-            <li>Accounts payable aging visibility</li>
-            <li>Customer-specific reporting library</li>
+          <p>
+            <li>• Purchase order and invoice visibility</li>
+            <li>• Inventory and stock coverage monitoring</li>
+            <li>• Shipment tracking and fulfillment insights</li>
+            <li>• Accounts payable aging visibility</li>
+            <li>• Customer-specific reporting library</li>
           </ul>
         </div>
 
@@ -340,10 +340,10 @@ export default function CustomerDashboardProject() {
           <h3>Business Impact</h3>
 
           <ul>
-            <li>Reduced dependence on manual reporting requests</li>
-            <li>Improved transparency and customer experience</li>
-            <li>Strengthened strategic value proposition</li>
-            <li>Enabled scalable external reporting delivery</li>
+            <li>• Reduced dependence on manual reporting requests</li>
+            <li>• Improved transparency and customer experience</li>
+            <li>• Strengthened strategic value proposition</li>
+            <li>• Enabled scalable external reporting delivery</li>
           </ul>
         </div>
       </div>
