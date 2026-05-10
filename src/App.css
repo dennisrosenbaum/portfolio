@@ -37,8 +37,8 @@ main {
 }
 
 .brand {
-  font-size: clamp(32px, 5vw, 58px);
-  font-weight: 800;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 0.95;
   color: #111;
@@ -110,7 +110,7 @@ main {
 
 .section-heading h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
@@ -141,35 +141,40 @@ main {
   gap: 18px;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
+
+  padding: 12px 0; /* 👈 THIS FIXES IT */
 }
 
 .project-card {
-  min-width: 310px;
-  max-width: 310px;
-  min-height: 245px;
-
-  padding: 24px;
-  background: #ffffff;
-  border: 1px solid #ececec;
-  border-radius: 12px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  scroll-snap-align: start;
-
+  position: relative;
+  min-width: 280px;
+  min-height: 220px;
+  padding: 20px 22px;
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.06),
-    0 3px 6px rgba(0, 0, 0, 0.06);
+  0 2px 4px rgba(0, 0, 0, 0.06),
+  0 6px 12px rgba(0, 0, 0, 0.06);
 }
 
+.tag-row {
+  margin-top: 16px;
+}
+
+.project-card::before {
+  background: var(--accent);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 2px;
+}
 
 .project-card h3 {
-  margin: 0 0 12px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  margin: 0 0 8px;          /* slightly tighter */
+  font-size: 17px;          /* ⬅️ smaller */
+  font-weight: 550;         /* slightly stronger since smaller */
+  letter-spacing: -0.02em;
 }
 
 .project-card p {
@@ -195,15 +200,17 @@ main {
 }
 
 .go-button {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
   border: none;
   background: transparent;
-  font-size: 26px;
+  font-size: 24px;
   cursor: pointer;
   padding: 0;
   color: #111;
 }
-
 .contact-section {
   border-top: 1px solid #eeeeee;
   padding: 42px 0 64px;
@@ -239,10 +246,6 @@ main {
   .about-box p {
     font-size: 16px;
   }
-
-  .project-card {
-    min-width: 280px;
-  }
 }
 
 .brand-block {
@@ -251,10 +254,11 @@ main {
 }
 
 .sub-brand {
-  font-size: 10px; /* within your 8–10 target */
-  color: #444;
-  margin-top: 2px;
-  letter-spacing: 0.5px;
+  font-size: 11px;           /* ⬅️ smaller */
+  color: #555;              /* charcoal grey */
+  margin-top: 4px;
+  letter-spacing: 0.6px;    /* slightly more refined */
+  font-weight: 500;
 }
 
 .about-divider {
@@ -264,11 +268,14 @@ main {
 }
 
 .resume-section {
-  margin: 36px 0 72px;
+  margin: 36px 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px; /* ⬅️ increase this */
 }
 
 .resume-card {
-  padding: 30px 32px;
+  padding: 30px 34px;
   background: #ffffff;
   border: 1px solid #ececec;
   border-radius: 12px;
@@ -278,11 +285,14 @@ main {
 }
 
 .resume-section-block h3 {
-  margin: 0 0 14px;
-  font-size: 15px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: #333;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .resume-section-block p {
@@ -339,11 +349,44 @@ main {
 .resume-role {
   padding-top: 22px;
   margin-top: 22px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #f1f1f1;
 }
 
 .resume-role:first-of-type {
+  padding-top: 0;
   margin-top: 0;
+  border-top: none;
+}
+
+/* GRID LAYOUT */
+.resume-role-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+}
+
+/* LEFT SIDE (DATES) */
+.resume-role-dates {
+  font-size: 13.5px;
+  color: #666;
+  padding-top: 2px;
+}
+
+/* RIGHT SIDE */
+.resume-role-content h4 {
+  margin: 0 0 8px;
+  font-size: 15.5px;
+  font-weight: 750;
+  color: #111;
+}
+
+/* BULLETS */
+.resume-list {
+  margin: 0;
+  padding-left: 18px; /* indentation under role */
+  color: #444;
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 .resume-role-heading {
@@ -376,9 +419,146 @@ main {
     grid-template-columns: 1fr;
     gap: 22px;
   }
+}
 
-  .resume-role-heading {
-    flex-direction: column;
-    gap: 4px;
+@media (max-width: 760px) {
+  .resume-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-role-dates {
+    margin-bottom: 6px;
+  }
+}
+
+.resume-section-group {
+  gap: 0; /* or remove entirely */
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-education {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resume-education div {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+}
+  
+.project-card {
+  position: relative;
+  min-width: 310px;
+  max-width: 310px;
+  min-height: 245px;
+  padding: 24px 24px 24px 30px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  bottom: 18px;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+  .signature {
+  width: 130px;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+  opacity: 0.85;
+  display: block;
+}
+
+.about-box img.signature {
+  margin-bottom: 0;
+}
+
+  .resume-section-group .section-heading {
+  margin-bottom: 26px;
+}
+
+.project-detail-section {
+  margin: 36px 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-detail-card {
+  padding: 28px 32px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.project-detail-intro {
+  margin: 0;
+  color: #444;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.project-detail-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.project-detail-card p,
+.project-detail-card li {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-detail-card p {
+  margin: 0;
+}
+
+.project-detail-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 760px) {
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-card {
+    padding: 24px;
   }
 }
