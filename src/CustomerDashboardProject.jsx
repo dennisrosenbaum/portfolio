@@ -260,26 +260,31 @@ function BigStat({label,value}) {return <div><div className="text-base text-gray
 function ReportsPage(){const reports=["OPEN ORDERS REPORT","ACCOUNTS PAYABLE REPORT","SPEND & USAGE REPORT","ASSET SERIAL NUMBER REPORT","STOCKED PRODUCTS & INVENTORY REPORT","SHIPPING & TRACKING NUMBER REPORT"];return <div className="grid grid-cols-2 gap-4">{reports.map((r,i)=><Card key={r} className="h-[188px] p-4"><b>{r}</b><p className="mt-5 max-w-2xl leading-5">{["The open orders report provides a detailed view of all orders that have been placed but not yet shipped or billed. It includes key information such as product details, quantities ordered, expected ship dates, and current order status.","The accounts payable report offers a comprehensive overview of outstanding invoices and their payment status. It includes details such as invoice numbers, due dates, amounts owed, and payment aging buckets.","The standard usage report provides a comprehensive summary of all billed transactions within the selected period. It includes key details such as product descriptions, quantities billed, shipment tracking numbers, and device serial numbers.","The asset serial number report provides a line-level view of all shipped products with their associated device serial numbers. It includes details such as order numbers, product descriptions, and corresponding invoice information.","The stocked products and inventory report provides a clear snapshot of all items currently available in your inventory. It highlights available quantities, incoming shipments, recent usage trends, and stock coverage.","The shipping and tracking number report consolidates all outbound shipment details to provide end-to-end delivery visibility. It includes tracking numbers, carrier information, ship dates, and ship-to locations."][i]}</p><a className="float-right mt-8 text-blue-600 underline">Click to View Report --&gt;</a></Card>)}</div>}
 
 export default function CustomerDashboardProject() {
+  const [page, setPage] = useState("home");
+
+  const content = useMemo(() => {
+    if (page === "home") return <HomePage />;
+    if (page === "insights") return <InsightsPage />;
+    if (page === "purchaseOrders") return <TablePage title="Your Purchase Orders" filters={["PO Number","PO Status","Ship-to Contact","Ship-to Address","Ship-to City","Ship-to State"]} summary={[{label:"COMPLETED (LAST 30 DAYS)",value:3,pct:95},{label:"PROCESSING",value:2,pct:62},{label:"PARTIALLY FULFILLED",value:1,pct:32},{label:"DELAYED",value:0,pct:0}]} columns={["PO NUMBER","ORDER DATE","STATUS","CUSTOMER NAME","SHIP-TO LOCATION","AMOUNT"]} rows={purchaseOrders} button="View PO Details" type="po" />;
+    if (page === "poDetail") return <PODetail />;
+    if (page === "invoices") return <TablePage title="Your Invoice History" filters={["Invoice","PO Number","Timeframe","Ship-to Contact","Ship-to Address","Ship-to City","Ship-to State"]} columns={["INVOICE NUMBER","PO NUMBER","INVOICE DATE","CUSTOMER NAME","SHIP-TO NAME","SHIP-TO LOCATION","AMOUNT"]} rows={invoices} button="View Invoice Details" />;
+    if (page === "inventory") return <TablePage title="Your Inventory" filters={["SKU","Manufacturer Part Number","SKU Description","Brand","Product Category"]} columns={["SKU","DESCRIPTION","PRODUCT CATEGORY","LINE OF BUSINESS","AVAILABLE UNITS","INCOMING UNITS","UNITS PURCHASED WEEKLY","STOCK COVERAGE (WEEKS)","LAST STOCKED DATE","DAYS AGED","90 DAY USAGE","LARGEST DEVIATION"]} rows={inventory.map(r => r.map((c, i) => i === 7 ? <><Dot color={Number(c) < 4 ? AMBER : GREEN} /> {c}</> : i === 9 && Number(c) > 90 ? <span className="bg-yellow-200 px-5 py-2">{c}</span> : c))} button="View SKU Details" />;
+    if (page === "inventoryDetail") return <InventoryDetail />;
+    if (page === "ap") return <TablePage title="Your Accounts Payable" filters={["Transaction Type","PO Number","Invoice","Invoice Status","Aging Category"]} summary={[{label:"TOTAL OUTSTANDING:",value:"$524,572",pct:0},{label:"CURRENT INVOICES",value:0,pct:0},{label:"DUE THIS WEEK",value:7,pct:22},{label:"DUE NEXT WEEK",value:0,pct:0},{label:"PAST DUE",value:26,pct:88}]} columns={["PO NUMBER","INVOICE","INVOICE DATE","STATUS","DUE DATE","AMOUNT","APPLIED","OPEN"]} rows={invoices.map(r => [r[1], r[0], r[2], r[2].includes("2025") || r[2].includes("2/") || r[2].includes("1/") ? "Past Due" : "Due This Week", "4/3/2026", money(r[6]), "$0.00", money(r[6])])} type="ap" />;
+    if (page === "assets") return <TablePage title={<span>Your Hardware Assets <Info size={18} className="inline text-blue-500" /></span>} filters={["Device Serial Number","SKU","Manufacturer Part Number","SKU Description","PO Number","Invoice","Status"]} columns={["SERIAL NUMBER","SKU","MANUFACTURER PART NUMBER","DESCRIPTION","PO NUMBER","INVOICE","ASSET AGE (YEARS)","STATUS"]} rows={assets} type="asset" />;
+    if (page === "shipments") return <TablePage title="Your Shipment Tracking" filters={["Invoice","PO Number","Timeframe","Carrier","Contents"]} columns={["INVOICE NUMBER","PO NUMBER","SHIP DATE","TRACKING NUMBER","CARRIER","SHIP TO LOCATION","CONTENTS"]} rows={shipments.map(r => r.map((c, i) => i === 3 ? <a className="text-blue-600 underline">{c}</a> : c))} />;
+    if (page === "reports") return <ReportsPage />;
+
+    return <HomePage />;
+  }, [page]);
+
   return (
     <div className="customer-dashboard-page">
       <div className="customer-dashboard-demo">
-  const [page, setPage] = useState("home");
-  const content = useMemo(() => {
-    if (page === "home") return <HomePage/>;
-    if (page === "insights") return <InsightsPage/>;
-    if (page === "purchaseOrders") return <TablePage title="Your Purchase Orders" filters={["PO Number","PO Status","Ship-to Contact","Ship-to Address","Ship-to City","Ship-to State"]} summary={[{label:"COMPLETED (LAST 30 DAYS)",value:3,pct:95},{label:"PROCESSING",value:2,pct:62},{label:"PARTIALLY FULFILLED",value:1,pct:32},{label:"DELAYED",value:0,pct:0}]} columns={["PO NUMBER","ORDER DATE","STATUS","CUSTOMER NAME","SHIP-TO LOCATION","AMOUNT"]} rows={purchaseOrders} button="View PO Details" type="po"/>;
-    if (page === "poDetail") return <PODetail/>;
-    if (page === "invoices") return <TablePage title="Your Invoice History" filters={["Invoice","PO Number","Timeframe","Ship-to Contact","Ship-to Address","Ship-to City","Ship-to State"]} columns={["INVOICE NUMBER","PO NUMBER","INVOICE DATE","CUSTOMER NAME","SHIP-TO NAME","SHIP-TO LOCATION","AMOUNT"]} rows={invoices} button="View Invoice Details"/>;
-    if (page === "inventory") return <TablePage title="Your Inventory" filters={["SKU","Manufacturer Part Number","SKU Description","Brand","Product Category"]} columns={["SKU","DESCRIPTION","PRODUCT CATEGORY","LINE OF BUSINESS","AVAILABLE UNITS","INCOMING UNITS","UNITS PURCHASED WEEKLY","STOCK COVERAGE (WEEKS)","LAST STOCKED DATE","DAYS AGED","90 DAY USAGE","LARGEST DEVIATION"]} rows={inventory.map(r=>r.map((c,i)=> i===7 ? <><Dot color={Number(c)<4?AMBER:GREEN}/> {c}</> : i===9 && Number(c)>90 ? <span className="bg-yellow-200 px-5 py-2">{c}</span> : c))} button="View SKU Details"/>;
-    if (page === "inventoryDetail") return <InventoryDetail/>;
-    if (page === "ap") return <TablePage title="Your Accounts Payable" filters={["Transaction Type","PO Number","Invoice","Invoice Status","Aging Category"]} summary={[{label:"TOTAL OUTSTANDING:",value:"$524,572",pct:0},{label:"CURRENT INVOICES",value:0,pct:0},{label:"DUE THIS WEEK",value:7,pct:22},{label:"DUE NEXT WEEK",value:0,pct:0},{label:"PAST DUE",value:26,pct:88}]} columns={["PO NUMBER","INVOICE","INVOICE DATE","STATUS","DUE DATE","AMOUNT","APPLIED","OPEN"]} rows={invoices.map(r=>[r[1],r[0],r[2], r[2].includes("2025")||r[2].includes("2/")||r[2].includes("1/")?"Past Due":"Due This Week","4/3/2026",money(r[6]),"$0.00",money(r[6])])} type="ap"/>;
-    if (page === "assets") return <TablePage title={<span>Your Hardware Assets <Info size={18} className="inline text-blue-500"/></span>} filters={["Device Serial Number","SKU","Manufacturer Part Number","SKU Description","PO Number","Invoice","Status"]} columns={["SERIAL NUMBER","SKU","MANUFACTURER PART NUMBER","DESCRIPTION","PO NUMBER","INVOICE","ASSET AGE (YEARS)","STATUS"]} rows={assets} type="asset"/>;
-    if (page === "shipments") return <TablePage title="Your Shipment Tracking" filters={["Invoice","PO Number","Timeframe","Carrier","Contents"]} columns={["INVOICE NUMBER","PO NUMBER","SHIP DATE","TRACKING NUMBER","CARRIER","SHIP TO LOCATION","CONTENTS"]} rows={shipments.map(r=>r.map((c,i)=> i===3 ? <a className="text-blue-600 underline">{c}</a> : c))}/>;
-    if (page === "reports") return <ReportsPage/>;
-    return <HomePage/>;
-  }, [page]);
-  return <Shell page={page} setPage={setPage} showFooterTabs={page==="home"}>{content}</Shell>;
- </div>
+        <Shell page={page} setPage={setPage} showFooterTabs={page === "home"}>
+          {content}
+        </Shell>
+      </div>
     </div>
   );
 }
