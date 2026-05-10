@@ -22,6 +22,7 @@ const projects = [
     description: "A customer-facing reporting portal for orders, invoices, and spend visibility.",
     color: "#f59e0b", // amber
     tags: ["Customer Experience", "Reporting", "Strategy"],
+    link: "/projects/customer-dashboard"
   },
   {
     title: "Portfolio Finance Dashboard",
@@ -429,6 +430,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects/kpi-framework" element={<KPIFrameworkProject />} />
+          <Route path="/projects/customer-dashboard" element={<CustomerDashboardProject />} />
         </Routes>
 
       </main>
