@@ -159,7 +159,7 @@ function Filter({ label, wide }) {
   );
 }
 
-function Shell({ page, setPage, children, showFooterTabs = false }) {
+function Shell({ children, page, setPage }) {
   return (
     <div className="customer-dashboard-shell relative h-[920px] overflow-hidden bg-[#eef2f6] text-[12px] text-black" style={{ fontFamily: "Aptos, Arial, sans-serif" }}>
       <div className="absolute left-0 right-0 top-0 z-20 h-6 bg-[#5d5a5a] px-7 text-[11px] font-bold leading-6 text-white">Last Refreshed: 04/06/2026 5:00 AM EST</div>
@@ -182,14 +182,6 @@ function Shell({ page, setPage, children, showFooterTabs = false }) {
       </aside>
       <div className="ml-[185px] pt-6">
   <div className="p-3">{children}</div>
-</div>
-      {showFooterTabs && (
-        <div className="absolute bottom-0 left-0 right-0 z-30 ml-[0px] flex h-[39px] bg-white text-xs shadow-[0_-1px_3px_rgba(0,0,0,0.15)]">
-          {["Purchase Orders", "Invoices", "Inventory", "Accounts Payable", "Asset Lookup", "Shipment Tracking", "Report Library"].map((t) => (
-            <div key={t} className="border-r px-8 py-3">{t}</div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }
@@ -199,7 +191,7 @@ function HomePage() {
     <div className="grid grid-cols-2 gap-3 pb-10">
       <Card className="p-4">
         <h1 className="text-lg font-semibold">Welcome</h1>
-        <p className="mt-4 max-w-3xl text-sm leading-6">Your data is refreshed nightly and reflects information <b>as of the close of the previous business day.</b><br />The dataset includes <b>just over three years of rolling transaction history</b>, providing a comprehensive view of your purchasing and operational activity. Use these dashboards to stay informed, improve visibility, and make smarter business decisions with confidence.</p>
+        <p className="text-[12px] leading-6 text-gray-800">Your data is refreshed nightly and reflects information <b>as of the close of the previous business day.</b><br />The dataset includes <b>just over three years of rolling transaction history</b>, providing a comprehensive view of your purchasing and operational activity. Use these dashboards to stay informed, improve visibility, and make smarter business decisions with confidence.</p>
       </Card>
       <Card className="p-4">
         <h2 className="text-lg font-semibold">Support Team</h2>
@@ -281,7 +273,7 @@ export default function CustomerDashboardProject() {
   return (
     <div className="customer-dashboard-page">
       <div className="customer-dashboard-demo">
-        <Shell page={page} setPage={setPage} showFooterTabs={page === "home"}>
+        <Shell page={page} setPage={setPage}>
           {content}
         </Shell>
       </div>
