@@ -260,6 +260,9 @@ function BigStat({label,value}) {return <div><div className="text-base text-gray
 function ReportsPage(){const reports=["OPEN ORDERS REPORT","ACCOUNTS PAYABLE REPORT","SPEND & USAGE REPORT","ASSET SERIAL NUMBER REPORT","STOCKED PRODUCTS & INVENTORY REPORT","SHIPPING & TRACKING NUMBER REPORT"];return <div className="grid grid-cols-2 gap-4">{reports.map((r,i)=><Card key={r} className="h-[188px] p-4"><b>{r}</b><p className="mt-5 max-w-2xl leading-5">{["The open orders report provides a detailed view of all orders that have been placed but not yet shipped or billed. It includes key information such as product details, quantities ordered, expected ship dates, and current order status.","The accounts payable report offers a comprehensive overview of outstanding invoices and their payment status. It includes details such as invoice numbers, due dates, amounts owed, and payment aging buckets.","The standard usage report provides a comprehensive summary of all billed transactions within the selected period. It includes key details such as product descriptions, quantities billed, shipment tracking numbers, and device serial numbers.","The asset serial number report provides a line-level view of all shipped products with their associated device serial numbers. It includes details such as order numbers, product descriptions, and corresponding invoice information.","The stocked products and inventory report provides a clear snapshot of all items currently available in your inventory. It highlights available quantities, incoming shipments, recent usage trends, and stock coverage.","The shipping and tracking number report consolidates all outbound shipment details to provide end-to-end delivery visibility. It includes tracking numbers, carrier information, ship dates, and ship-to locations."][i]}</p><a className="float-right mt-8 text-blue-600 underline">Click to View Report --&gt;</a></Card>)}</div>}
 
 export default function CustomerDashboardProject() {
+  return (
+    <div className="customer-dashboard-page">
+      <div className="customer-dashboard-demo">
   const [page, setPage] = useState("home");
   const content = useMemo(() => {
     if (page === "home") return <HomePage/>;
@@ -276,4 +279,7 @@ export default function CustomerDashboardProject() {
     return <HomePage/>;
   }, [page]);
   return <Shell page={page} setPage={setPage} showFooterTabs={page==="home"}>{content}</Shell>;
+ </div>
+    </div>
+  );
 }
