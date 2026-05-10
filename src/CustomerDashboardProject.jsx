@@ -287,12 +287,74 @@ export default function CustomerDashboardProject() {
   }, [page]);
 
   return (
+  <>
+    <section className="project-case-study">
+      <div className="section-heading">
+        <h2>Customer Business Dashboard 🖥️</h2>
+      </div>
+
+      <div className="project-detail-card">
+        <p className="project-detail-intro">
+          Designed a customer-facing analytics portal that consolidated operational,
+          purchasing, inventory, invoice, and shipment visibility into a centralized
+          reporting experience powered by Power BI.
+        </p>
+      </div>
+
+      <div className="project-detail-grid">
+        <div className="project-detail-card">
+          <h3>Business Problem</h3>
+
+          <p>
+            Customers relied heavily on manual requests to access operational data,
+            including purchase order status, invoice history, shipment tracking,
+            inventory visibility, and spend analytics. This created reporting
+            bottlenecks, delayed decision-making, and limited transparency.
+          </p>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Solution</h3>
+
+          <p>
+            Developed a scalable customer reporting portal providing self-service
+            access to operational and financial data through a unified dashboard
+            experience. The solution emphasized usability, executive visibility,
+            and reduction of ad hoc reporting dependency.
+          </p>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Key Features</h3>
+
+          <ul>
+            <li>Purchase order and invoice visibility</li>
+            <li>Inventory and stock coverage monitoring</li>
+            <li>Shipment tracking and fulfillment insights</li>
+            <li>Accounts payable aging visibility</li>
+            <li>Customer-specific reporting library</li>
+          </ul>
+        </div>
+
+        <div className="project-detail-card">
+          <h3>Business Impact</h3>
+
+          <ul>
+            <li>Reduced dependence on manual reporting requests</li>
+            <li>Improved transparency and customer experience</li>
+            <li>Strengthened strategic value proposition</li>
+            <li>Enabled scalable external reporting delivery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <div className="customer-dashboard-page">
       <div className="customer-dashboard-demo">
         <Shell page={page} setPage={setPage}>
-  {content}
-</Shell>
+          {content}
+        </Shell>
       </div>
     </div>
-  );
-}
+  </>
+);
