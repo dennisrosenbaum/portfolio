@@ -159,20 +159,34 @@ function Filter({ label, wide }) {
   );
 }
 
-function Shell({ children, page, setPage }) {
+function Shell({ page, setPage, children }) {
   return (
-    <div className="customer-dashboard-shell relative h-[920px] overflow-hidden bg-[#eef2f6] text-[12px] text-black" style={{ fontFamily: "Aptos, Arial, sans-serif" }}>
-      <div className="absolute left-0 right-0 top-0 z-20 h-6 bg-[#5d5a5a] px-7 text-[11px] font-bold leading-6 text-white">Last Refreshed: 04/06/2026 5:00 AM EST</div>
-      <aside className="absolute left-0 top-4 z-10 h-[calc(760px-24px)] w-[185px] border-r border-gray-200 bg-white shadow-md">
+    <div
+      className="customer-dashboard-shell relative h-[920px] overflow-hidden bg-[#eef2f6] text-[12px] text-black"
+      style={{ fontFamily: "Aptos, Arial, sans-serif" }}
+    >
+      <div className="absolute left-0 right-0 top-0 z-20 h-6 bg-[#5d5a5a] px-7 text-[11px] font-bold leading-6 text-white">
+        Last Refreshed: 04/06/2026 5:00 AM EST
+      </div>
+
+      <aside className="absolute left-0 top-6 z-10 h-[calc(920px-24px)] w-[185px] border-r border-gray-200 bg-white shadow-md">
         <div className="flex h-[50px] items-center gap-2 border-b border-gray-100 px-4">
           <span className="text-2xl font-bold text-[#e1261c]">▱ ABC Inc.</span>
         </div>
+
         <nav>
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = item.key === page;
+
             return (
-              <button key={item.key} onClick={() => setPage(item.key)} className={`flex h-36px w-full items-center gap-4 border-b border-gray-100 px-3 py-3 text-left text-[12px] tracking-wide ${active ? "bg-gray-50" : "hover:bg-gray-50"}`}>
+              <button
+                key={item.key}
+                onClick={() => setPage(item.key)}
+                className={`flex w-full items-center gap-4 border-b border-gray-100 px-3 py-3 text-left text-[12px] tracking-wide ${
+                  active ? "bg-gray-50" : "hover:bg-gray-50"
+                }`}
+              >
                 <Icon size={22} className="text-[#e1261c]" />
                 <span className="text-gray-700">{item.label}</span>
               </button>
@@ -180,8 +194,10 @@ function Shell({ children, page, setPage }) {
           })}
         </nav>
       </aside>
+
       <div className="ml-[185px] pt-6">
-  <div className="p-3">{children}</div>
+        <div className="p-3">{children}</div>
+      </div>
     </div>
   );
 }
@@ -274,8 +290,8 @@ export default function CustomerDashboardProject() {
     <div className="customer-dashboard-page">
       <div className="customer-dashboard-demo">
         <Shell page={page} setPage={setPage}>
-          {content}
-        </Shell>
+  {content}
+</Shell>
       </div>
     </div>
   );
