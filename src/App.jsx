@@ -126,14 +126,16 @@ function ProjectCard({ project }) {
 function Projects() {
   return (
     <section className="section-block projects-section">
-      <div className="section-heading project-heading-row">
-        <h2>🗂️ Projects</h2>
-      </div>
+      <div className="projects-inner">
+        <div className="section-heading project-heading-row">
+          <h2>🗂️ Projects</h2>
+        </div>
 
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );
