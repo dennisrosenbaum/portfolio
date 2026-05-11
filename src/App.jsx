@@ -6,19 +6,6 @@ import CustomerDashboardProject from "./CustomerDashboardProject";
 
 const projects = [
   {
-    title: "BI Request & Ticketing System",
-    description: "A lightweight intake and prioritization system for analytics requests.",
-    color: "#3b82f6", // blue
-    tags: ["Operations", "Analytics", "Workflow"],
-  },
-  {
-    title: "Sales KPI Framework",
-    description: "A seller performance model connecting activity, pipeline, and outcomes.",
-    color: "#10b981", // green
-    tags: ["Finance", "Sales Strategy", "Power BI"],
-    link: "/projects/kpi-framework",
-  },
-  {
     title: "Customer Business Dashboard",
     description: "A customer-facing reporting portal for orders, invoices, and spend visibility.",
     color: "#f59e0b", // amber
@@ -26,8 +13,21 @@ const projects = [
     link: "/projects/customer-dashboard"
   },
   {
-    title: "Portfolio Finance Dashboard",
-    description: "A personal financial database and dashboard for monthly tracking.",
+    title: "Coming Soon",
+    description: "A placeholder for another sample project that is coming soon.",
+    color: "#3b82f6", // blue
+    tags: ["Operations", "Analytics", "Workflow"],
+  },
+  {
+    title: "Coming Soon",
+    description: "A placeholder for another sample project that is coming soon.",
+    color: "#10b981", // green
+    tags: ["Finance", "Sales Strategy", "Power BI"],
+    link: "/projects/kpi-framework",
+  },
+  {
+    title: "Coming Soon",
+    description: "A placeholder for another sample project that is coming soon.",
     color: "#8b5cf6", // purple
     tags: ["Finance", "Python", "Data"],
   },
