@@ -25,12 +25,6 @@ const projects = [
     tags: ["Finance", "Sales Strategy", "Power BI"],
     link: "/projects/kpi-framework",
   },
-  {
-    title: "Coming Soon",
-    description: "A placeholder for another sample project that is coming soon.",
-    color: "#8b5cf6", // purple
-    tags: ["Finance", "Python", "Data"],
-  },
 ];
 
 function TopRibbon() {
