@@ -144,13 +144,28 @@ main {
   transform: translateY(-1px);
 }
 
-.project-carousel {
-  display: flex;
-  gap: 18px;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
 
-  padding: 12px 0; /* 👈 THIS FIXES IT */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-grid .project-card {
+  height: 100%;
 }
 
 .project-card {
