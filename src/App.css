@@ -98,8 +98,11 @@ main {
   font-size: 15px;
   line-height: 1.65;
 }
+
 .section-block {
-  margin-bottom: 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .page-break {
@@ -149,7 +152,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   width: 100%;
-  align-items: stretch;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1200px) {
