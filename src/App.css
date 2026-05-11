@@ -726,3 +726,17 @@ main {
     line-height: 1.6;
   }
 }
+
+.dashboard-preview-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.dashboard-preview-wrapper img {
+  display: block;
+  min-width: 1100px;
+  width: 100%;
+  height: auto;
+}
