@@ -124,33 +124,13 @@ function ProjectCard({ project }) {
   );
 }
 function Projects() {
-  const carouselRef = useRef(null);
-
-  const scrollProjects = (direction) => {
-    if (!carouselRef.current) return;
-
-    carouselRef.current.scrollBy({
-      left: direction === "left" ? -340 : 340,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="section-block projects-section">
       <div className="section-heading project-heading-row">
         <h2>🗂️ Projects</h2>
-
-        <div className="carousel-controls">
-          <button onClick={() => scrollProjects("left")} aria-label="Scroll projects left">
-            ←
-          </button>
-          <button onClick={() => scrollProjects("right")} aria-label="Scroll projects right">
-            →
-          </button>
-        </div>
       </div>
 
-      <div className="project-carousel" ref={carouselRef}>
+      <div className="projects-grid">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
@@ -158,7 +138,6 @@ function Projects() {
     </section>
   );
 }
-
 function Resume() {
   useEffect(() => {
   document.title = "Resume | Dennis Rosenbaum";
