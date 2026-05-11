@@ -306,9 +306,7 @@ export default function CustomerDashboardProject() {
           <h3>Business Problem</h3>
 
           <p>
-            Customers relied heavily on manual requests to access operational data,
-            including purchase order status, invoice history, shipment tracking,
-            inventory visibility, and spend analytics. This created reporting
+            Customers relied heavily on manual requests to access operational data, creating reporting
             bottlenecks, delayed decision-making, and limited transparency.
           </p>
         </div>
@@ -317,10 +315,9 @@ export default function CustomerDashboardProject() {
           <h3>Solution</h3>
 
           <p>
-            Developed a scalable customer reporting portal providing self-service
+            Developed a scalable reporting portal providing self-service
             access to operational and financial data through a unified dashboard
-            experience. The solution emphasized usability, executive visibility,
-            and reduction of ad hoc reporting dependency.
+            experience.
           </p>
         </div>
 
@@ -331,8 +328,8 @@ export default function CustomerDashboardProject() {
             <li>• Purchase order and invoice visibility</li>
             <li>• Inventory and stock coverage monitoring</li>
             <li>• Shipment tracking and fulfillment insights</li>
-            <li>• Accounts payable aging visibility</li>
-            <li>• Customer-specific reporting library</li>
+            <li>• Enterprise-grade security via Microsoft Azure</li>
+            <li>• Downloadable excel reports</li>
           </ul>
         </div>
 
@@ -340,7 +337,7 @@ export default function CustomerDashboardProject() {
           <h3>Business Impact</h3>
 
           <ul>
-            <li>• Reduced dependence on manual reporting requests</li>
+            <li>• Reduced support costs internally</li>
             <li>• Improved transparency and customer experience</li>
             <li>• Strengthened strategic value proposition</li>
             <li>• Enabled scalable external reporting delivery</li>
