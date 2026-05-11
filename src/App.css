@@ -668,3 +668,61 @@ main {
 .project-card-purple {
   background: #f7f4ff;
 }
+
+@media (max-width: 768px) {
+  .project-detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+  .project-detail-hero {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .project-detail-hero h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .project-detail-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-detail-card,
+  .project-detail-card-blue,
+  .project-detail-card-green,
+  .project-detail-card-yellow,
+  .project-detail-card-purple {
+    width: 100%;
+    padding: 22px;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  .project-detail-card h3,
+  .project-detail-card-blue h3,
+  .project-detail-card-green h3,
+  .project-detail-card-yellow h3,
+  .project-detail-card-purple h3 {
+    font-size: 1.15rem;
+  }
+
+  .project-detail-card p,
+  .project-detail-card li,
+  .project-detail-card-blue p,
+  .project-detail-card-green p,
+  .project-detail-card-yellow p,
+  .project-detail-card-purple p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
