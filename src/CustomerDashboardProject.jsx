@@ -293,14 +293,6 @@ export default function CustomerDashboardProject() {
         <h2>🖥️ Customer Business Dashboard </h2>
       </div>
 
-      <div className="project-detail-card">
-        <p className="project-detail-intro">
-          Designed a customer-facing analytics portal that consolidated operational,
-          purchasing, inventory, invoice, and shipment visibility into a centralized
-          reporting experience powered by Power BI.
-        </p>
-      </div>
-
       <div className="project-detail-grid">
         <div className="project-detail-card project-card-blue">
           <h3>Business Problem</h3>
