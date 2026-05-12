@@ -56,7 +56,7 @@ function About() {
   return (
     <section className="section-block about-section">
       <div className="section-heading">
-        <h2>⚙️ Welcome</h2>
+        <h2>Welcome</h2>
       </div>
 
       <div className="about-box">
@@ -122,7 +122,7 @@ function Projects() {
     <section className="section-block projects-section">
       <div className="projects-inner">
         <div className="section-heading project-heading-row">
-          <h2>🗂️ Projects</h2>
+          <h2>Projects</h2>
         </div>
 
         <div className="projects-grid">
@@ -143,7 +143,7 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-  👤 Executive Profile
+  Executive Profile
 </h2>
 </div>
 
@@ -168,7 +168,7 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-  🎓 Education & Certification
+  Education & Certification
 </h2>
 </div>
 
@@ -185,7 +185,7 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-  📊 Core Capabilities
+  Core Capabilities
 </h2>
 </div>
 
@@ -225,7 +225,7 @@ function Resume() {
       <div className="resume-section-group">
         <div className="section-heading">
   <h2 className="section-title">
-  💼 Professional Experience
+  Professional Experience
 </h2>
 </div>
 
