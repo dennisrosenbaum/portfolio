@@ -238,13 +238,13 @@ function Resume() {
               title="Manager, Finance Operations Strategy"
               dates="Nov 2024 – Present"
               bullets={[
-                "Lead and develop a team of 3 analysts responsible for sales analytics, KPI reporting, operational reporting, and strategic initiatives supporting Finance, Sales, and Operations leadership",
-                "Partner with Sales and Finance leadership on forecasting, revenue planning, pipeline analysis, and performance management, translating financial and operational trends into actionable business insights and recommendations",
-                "Direct enterprise rollout strategy for a customer-facing Power BI reporting platform designed to improve operational transparency, strengthen customer engagement, reduce manual service dependency, and enhance the company’s value proposition as a technology-enabled strategic partner",
-                "Develop KPI frameworks and executive reporting used to evaluate sales productivity, customer engagement, pipeline sufficiency, revenue performance, and operational effectiveness across multiple commercial teams",
-                "Design and optimize sales territory and capacity models, aligning account coverage with revenue opportunity and market potential to support resource allocation and headcount planning decisions",
-                "Led territory planning strategy for a newly formed national business development organization (10 sellers), leveraging macroeconomic indicators, whitespace analysis, and market opportunity modeling to improve geographic alignment and pipeline generation efficiency",
-                "Drive cross-functional process improvement initiatives focused on reporting automation, data governance, and decision support, improving visibility into financial and operational performance drivers",
+                "•  Lead and develop a team of 3 analysts responsible for sales analytics, KPI reporting, operational reporting, and strategic initiatives supporting Finance, Sales, and Operations leadership",
+                "•  Partner with Sales and Finance leadership on forecasting, revenue planning, pipeline analysis, and performance management, translating financial and operational trends into actionable business insights and recommendations",
+                "•  Direct enterprise rollout strategy for a customer-facing Power BI reporting platform designed to improve operational transparency, strengthen customer engagement, reduce manual service dependency, and enhance the company’s value proposition as a technology-enabled strategic partner",
+                "•  Develop KPI frameworks and executive reporting used to evaluate sales productivity, customer engagement, pipeline sufficiency, revenue performance, and operational effectiveness across multiple commercial teams",
+                "•  Design and optimize sales territory and capacity models, aligning account coverage with revenue opportunity and market potential to support resource allocation and headcount planning decisions",
+                "•  Led territory planning strategy for a newly formed national business development organization (10 sellers), leveraging macroeconomic indicators, whitespace analysis, and market opportunity modeling to improve geographic alignment and pipeline generation efficiency",
+                "•  Drive cross-functional process improvement initiatives focused on reporting automation, data governance, and decision support, improving visibility into financial and operational performance drivers",
               ]}
             />
 
@@ -252,10 +252,10 @@ function Resume() {
               title="Margin Manager"
               dates="Apr 2021 – Oct 2024"
               bullets={[
-                "Led enterprise transition from top-line growth focus to EBITDA-driven performance management, contributing to more than $1M in margin recovery through targeted profitability and pricing initiatives over a two-year period",
-                "Developed customer-level profitability reporting and P&L visibility across thousands of accounts, identifying margin leakage, cost-to-serve inefficiencies, and previously untracked operational cost drivers",
-                "Designed and operationalized account-level remediation strategy with Sales, improving pricing discipline and profitability across underperforming segments",
-                "Supported executive decision-making through financial analysis and scenario evaluation, quantifying trade-offs between revenue growth, margin compression, customer retention, and operating cost structure",
+                "•  Led enterprise transition from top-line growth focus to EBITDA-driven performance management, contributing to more than $1M in margin recovery through targeted profitability and pricing initiatives over a two-year period",
+                "•  Developed customer-level profitability reporting and P&L visibility across thousands of accounts, identifying margin leakage, cost-to-serve inefficiencies, and previously untracked operational cost drivers",
+                "•  Designed and operationalized account-level remediation strategy with Sales, improving pricing discipline and profitability across underperforming segments",
+                "•  Supported executive decision-making through financial analysis and scenario evaluation, quantifying trade-offs between revenue growth, margin compression, customer retention, and operating cost structure",
               ]}
             />
 
@@ -263,11 +263,11 @@ function Resume() {
               title="Project Manager"
               dates="Apr 2017 – Mar 2021"
               bullets={[
-                "Built the organization’s first centralized data and analytics ecosystem, integrating 4+ systems into a governed, scalable architecture.",
-                "Developed foundational data pipelines, models, and semantic layers, standardizing KPI definitions and enabling consistent reporting across the enterprise.",
-                "Automated reporting workflows, eliminating ~70% of manual reporting effort and significantly improving data timeliness and accuracy.",
-                "Drive shift toward self-service analytics, reducing dependency on ad hoc reporting and accelerating decision-making cycles",
-                "Established a single source of truth for sales and financial performance, enabling leadership to make faster, data-backed decisions.",
+                "•  Built the organization’s first centralized data and analytics ecosystem, integrating 4+ systems into a governed, scalable architecture.",
+                "•  Developed foundational data pipelines, models, and semantic layers, standardizing KPI definitions and enabling consistent reporting across the enterprise.",
+                "•  Automated reporting workflows, eliminating ~70% of manual reporting effort and significantly improving data timeliness and accuracy.",
+                "•  Drive shift toward self-service analytics, reducing dependency on ad hoc reporting and accelerating decision-making cycles",
+                "•  Established a single source of truth for sales and financial performance, enabling leadership to make faster, data-backed decisions.",
               ]}
             />
 
@@ -275,10 +275,10 @@ function Resume() {
               title="Accountant I & II"
               dates="Sept 2011 – Mar 2017"
               bullets={[
-                "Managed financial reporting, close processes, and variance analysis supporting accurate and timely financial statements.",
-                "Oversaw $1M+ receivables portfolio, improving collections performance by ~10% through enhanced tracking and follow-up processes.",
-                "Partnered with auditors, delivering required documentation and resolving audit inquiries to ensure compliance.",
-                "Built early reporting and forecasting tools that evolved into broader analytics capabilities.",
+                "•  Managed financial reporting, close processes, and variance analysis supporting accurate and timely financial statements.",
+                "•  Oversaw $1M+ receivables portfolio, improving collections performance by ~10% through enhanced tracking and follow-up processes.",
+                "•  Partnered with auditors, delivering required documentation and resolving audit inquiries to ensure compliance.",
+                "•  Built early reporting and forecasting tools that evolved into broader analytics capabilities.",
               ]}
             />
           </div>
