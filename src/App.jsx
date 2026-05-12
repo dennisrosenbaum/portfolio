@@ -150,7 +150,7 @@ function Resume() {
         <div className="resume-card">
           <div className="resume-section-block">
             <p>
-              Finance and operations leader with experience driving FP&A, performance management, 
+              Finance and operations leader with experience driving analytics, performance management, 
               and finance transformation initiatives within a complex B2B operating environment. 
               Progressive background spanning accounting, corporate finance, analytics, and operational 
               strategy, with a track record of partnering cross-functionally to improve forecasting, 
