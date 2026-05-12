@@ -150,16 +150,16 @@ function Resume() {
         <div className="resume-card">
           <div className="resume-section-block">
             <p>
-              Built career within a lean, high-growth business unit, advancing through
-              progressive roles spanning accounting, finance, analytics, and operations
-              while partnering directly with senior leadership to drive end-to-end
-              visibility into commercial strategy, execution, and performance drivers.
+              Finance and operations leader with experience driving FP&A, performance management, 
+              and finance transformation initiatives within a complex B2B operating environment. 
+              Progressive background spanning accounting, corporate finance, analytics, and operational 
+              strategy, with a track record of partnering cross-functionally to improve forecasting, 
+              profitability, KPI governance, and executive decision-making. 
             </p>
             <p>
-              Recognized for architecting scalable analytics ecosystems and converting
-              complex data into enterprise-grade business tools, influencing
-              cross-functional stakeholders without direct authority, and shaping
-              data-driven strategy.
+              Recognized for translating financial and operational data into scalable planning 
+              frameworks, process improvements, and technology-enabled business solutions that 
+              support revenue growth and margin optimization.
             </p>
           </div>
         </div>
@@ -196,24 +196,24 @@ function Resume() {
                 <h4>Strategic & Financial Leadership</h4>
                 <ul className="resume-list">
                   <li>Revenue & Margin Strategy</li>
-                  <li>KPI Architecture & Performance Management</li>
-                  <li>Customer-Level Profitability (P&amp;L)</li>
-                  <li>Pipeline Health & Sales Effectiveness</li>
-                  <li>EBITDA Optimization Initiatives</li>
+                  <li>KPI Governance</li>
+                  <li>Forecasting & Budgeting</li>
+                  <li>Strategic Planning </li>
+                  <li>Scenario Modeling</li>
+                  <li>Enterprise Reporting</li>
                   <li>Territory & Capacity Planning</li>
-                  <li>Market Segmentation & Coverage Strategy</li>
                 </ul>
               </div>
 
               <div>
                 <h4>Analytics & Technology</h4>
                 <ul className="resume-list">
-                  <li>Power BI — Enterprise Reporting, DAX</li>
-                  <li>SQL / Snowflake Data Modeling</li>
-                  <li>Salesforce Analytics & Data Strategy</li>
-                  <li>Power Query / Power Automate</li>
                   <li>Advanced Excel</li>
-                  <li>Oracle / Essbase</li>
+                  <li>Power BI & Report Builder</li>
+                  <li>SQL / DAX / Snowflake Data Modeling</li>
+                  <li>Salesforce</li>
+                  <li>Power Query & Power Automate</li>
+                  <li>Oracle & Essbase</li>
                   <li>Anaplan</li>
                 </ul>
               </div>
@@ -238,13 +238,13 @@ function Resume() {
               title="Manager, Finance Operations Strategy"
               dates="Nov 2024 – Present"
               bullets={[
-                "Lead enterprise strategy for sales performance, pipeline analytics, and KPI frameworks across 25+ sellers, influencing behavior and revenue outcomes through data-driven insights.",
-                "Architect driver-based financial models linking pipeline, sales activity, and operational levers to revenue and margin forecasts, improving forecast accuracy and planning precision.",
-                "Built and scaled executive-level Power BI dashboards providing real-time visibility into pipeline health, attainment, and productivity, adopted across Sales and Leadership teams.",
-                "Serve as a cross-functional strategic partner to Sales, Finance, and Operations leadership, aligning on performance targets, accountability frameworks, and growth strategy.",
-                "Drive shift toward self-service analytics, reducing dependency on ad hoc reporting and accelerating decision-making cycles.",
-                "Designed and optimized sales territory and capacity models, aligning account coverage with revenue potential and identifying whitespace opportunities to inform headcount planning and resource allocation decisions.",
-                "Led territory planning strategy for a new business development team, using macroeconomic indicators to define balanced geographic coverage and maximize pipeline generation efficiency.",
+                "Lead and develop a team of 3 analysts responsible for sales analytics, KPI reporting, operational reporting, and strategic initiatives supporting Finance, Sales, and Operations leadership",
+                "Partner with Sales and Finance leadership on forecasting, revenue planning, pipeline analysis, and performance management, translating financial and operational trends into actionable business insights and recommendations",
+                "Direct enterprise rollout strategy for a customer-facing Power BI reporting platform designed to improve operational transparency, strengthen customer engagement, reduce manual service dependency, and enhance the company’s value proposition as a technology-enabled strategic partner",
+                "Develop KPI frameworks and executive reporting used to evaluate sales productivity, customer engagement, pipeline sufficiency, revenue performance, and operational effectiveness across multiple commercial teams",
+                "Design and optimize sales territory and capacity models, aligning account coverage with revenue opportunity and market potential to support resource allocation and headcount planning decisions",
+                "Led territory planning strategy for a newly formed national business development organization (10 sellers), leveraging macroeconomic indicators, whitespace analysis, and market opportunity modeling to improve geographic alignment and pipeline generation efficiency",
+                "Drive cross-functional process improvement initiatives focused on reporting automation, data governance, and decision support, improving visibility into financial and operational performance drivers",
               ]}
             />
 
@@ -252,10 +252,10 @@ function Resume() {
               title="Margin Manager"
               dates="Apr 2021 – Oct 2024"
               bullets={[
-                "Led enterprise pivot from top-line growth to EBITDA-focused performance, delivering $1M+ in margin recovery through targeted profitability initiatives over a 2-year period.",
-                "Developed customer-level P&L visibility across thousands of accounts, uncovering previously untracked cost drivers and systemic margin leakage.",
-                "Designed and operationalized account-level remediation strategy with Sales, improving pricing discipline and profitability across underperforming segments.",
-                "Influenced executive decision-making by quantifying trade-offs between revenue growth, margin compression, and cost structure.",
+                "Led enterprise transition from top-line growth focus to EBITDA-driven performance management, contributing to more than $1M in margin recovery through targeted profitability and pricing initiatives over a two-year period",
+                "Developed customer-level profitability reporting and P&L visibility across thousands of accounts, identifying margin leakage, cost-to-serve inefficiencies, and previously untracked operational cost drivers",
+                "Designed and operationalized account-level remediation strategy with Sales, improving pricing discipline and profitability across underperforming segments",
+                "Supported executive decision-making through financial analysis and scenario evaluation, quantifying trade-offs between revenue growth, margin compression, customer retention, and operating cost structure",
               ]}
             />
 
@@ -266,6 +266,7 @@ function Resume() {
                 "Built the organization’s first centralized data and analytics ecosystem, integrating 4+ systems into a governed, scalable architecture.",
                 "Developed foundational data pipelines, models, and semantic layers, standardizing KPI definitions and enabling consistent reporting across the enterprise.",
                 "Automated reporting workflows, eliminating ~70% of manual reporting effort and significantly improving data timeliness and accuracy.",
+                "Drive shift toward self-service analytics, reducing dependency on ad hoc reporting and accelerating decision-making cycles",
                 "Established a single source of truth for sales and financial performance, enabling leadership to make faster, data-backed decisions.",
               ]}
             />
